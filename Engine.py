@@ -1,13 +1,37 @@
 import multiprocessing 
 import time
-import subprocess
+import subprocess 
+import os 
+import shutil 
 
-class Engine: 
+class Engine:   
+
+    def __init__(self, location, schedule):    
+        self.location = location 
+        self.schedule = schedule 
+
+
+    def initialize(self):
+
+        curr = shutil.copytree(self.location, "temp") 
+        print(os.listdir("temp"))  
+        os.chdir("temp")
+        print("calling sonar...")  
+        subprocess.run([os.environ["SONAR_SCAN"]])  
+        os.chdir(os.path.dirname(os.getcwd()))  
+        shutil.rmtree("temp")
+
+        #go to repo 
+        #clone repo  
+        #go into clone repo  
+        #call invokeTools 
+
+
 
     def invokeTools(self, schedule):
-        procs = []  
-        subprocess.run(["cd", "~/sonarqube-8.3.1.34397/bin/linux-x86-64"])  
-        suborocess.run(["./sonar.sh"])
+        procs = []   
+        print("run sonarqube") 
+        subprocess.run([os.environ["SONAR_SCAN"]])  
         for task in schedule: 
             #make new process 
             #call invokeTool(task) in process 
@@ -30,4 +54,5 @@ class Engine:
         print("calling tool " + task + "...")  
         time.sleep(1)  
        
-        print("tool " + task + " is done")
+        print("tool " + task + " is done") 
+        
