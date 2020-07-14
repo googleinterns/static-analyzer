@@ -1,0 +1,23 @@
+{ 
+
+"tools":{ 
+
+        "SonarQube": {
+            "toolName":"SonarQube",  
+            "fileTypes": ["Java"], 
+            "method":"API",  
+            "requestCommands": ["http://localhost:9000/api/issues/search?componentKeys=test1"], 
+            "mapping": { 
+                     "vulList": "issues",   
+                     "toolName": "SonarQube", 
+                     "file": "component", 
+                     "description": "message",
+                     "location": "line"
+                     
+
+                    } 
+        }
+    }  
+    
+
+}

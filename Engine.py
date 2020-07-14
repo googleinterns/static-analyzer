@@ -6,7 +6,10 @@ import shutil
 import Utils
 
 class Engine:  
+    #TO-DO: 
+        #implementing multi cmd calls (sonarQube server -> scanner) 
 
+        
     #tried to avoid linux sepcific commands   
 
     def __init__(self, location, schedule):    
