@@ -9,7 +9,7 @@ class Engine:
     #TO-DO: 
         #implementing multi cmd calls (sonarQube server -> scanner) 
 
-        
+
     #tried to avoid linux sepcific commands   
 
     def __init__(self, location, schedule):    
@@ -18,26 +18,11 @@ class Engine:
 
     #Overall workflow of Enigne 
         #public interfacing function run 
-        #copies files to be scanned and puts into temp repo 
         #for each task in schedule, makes a new process to run static analyzer on files  
         #exits when all processes are done 
     def run(self):
 
-        #cloning repo  
-        try: 
-            excps = []
-            shutil.copytree(self.__location, "temp")  
-        except FileExistsError as excp:
-            Utils.printErrorMessage(message="TEMP ALREADY EXISTES PLEASE RENAME OR DELETE") 
-            exit(1) 
-        except FileNotFoundError as excp: 
-            Utils.printErrorMessage(message="PATH TO SRC DOSEN'T EXIST") 
-            exit(1)
-        except shutil.Error as excp: 
-            Utils.printErrorMessage(message ="CHOULDN'T COPY FILES TO SCAN") 
-            exit(1) 
-        
-        os.chdir("temp") 
+       #should be in repo right now 
 
         #run static analyzers 
         self.__invokeTools(schedule=self.__schedule)

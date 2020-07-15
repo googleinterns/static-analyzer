@@ -1,7 +1,7 @@
 import json 
 import requests  
 import Utils 
-from Schedule import Task
+from Scheduler import Task
 class ReportReader:  
 
     #To-Do: 

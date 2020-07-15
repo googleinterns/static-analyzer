@@ -1,12 +1,23 @@
-class Schedule: 
+import os 
+
+class Scheduler: 
 
     #exposed public function, makes and returns schedule  
     def makeSchedule(self):  
-        #load list of file types in repo 
-        #load internal file  
-        #for every file type, add all tools that can scan it as task  
+        self.__getFileExt(); 
+        return "NTI"
+
+    def __getFileExt(self):  
+        files = [] 
+
+        for root, dirs, filenames in os.walk(".", topdown= True): 
+            files.extend(filenames)  
 
         
+    
+        print(files)
+
+
          
 
     
