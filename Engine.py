@@ -12,8 +12,7 @@ class Engine:
 
     #tried to avoid linux sepcific commands   
 
-    def __init__(self, location, schedule):    
-        self.__location = location 
+    def __init__(self,schedule):    
         self.__schedule = schedule 
 
     #Overall workflow of Enigne 
@@ -27,10 +26,7 @@ class Engine:
         #run static analyzers 
         self.__invokeTools(schedule=self.__schedule)
 
-        #delete repo when processes and scans are done 
-        os.chdir(os.path.dirname(os.getcwd()))  
-        shutil.rmtree("temp")
-
+       
        
 
 
@@ -57,11 +53,14 @@ class Engine:
     #invokes the tool via provided command (absolute path)
     def __invokeTool(self, task): 
         Utils.printNotiMessage("RUNNING " + task.getToolName() + "...") 
-        command = task.getCommand().split(" ") 
-        #potential security input check??
-        retCode = subprocess.run(command).returncode     
-        if (retCode != 0): 
-            Utils.printErrorMessage(task.getToolName() + " SCAN FAILED; CHECK ITS LOGS") 
-        else:
-            Utils.printNotiMessage(task.getToolName() + " SCAN SUCESSFUL")  
+        commands = task.getCommand() 
+
+        for command in commands: 
+            #potential security input check??
+            retCode = subprocess.run(command).returncode     
+            if (retCode != 0): 
+                Utils.printErrorMessage(task.getToolName() + " SCAN FAILED; CHECK ITS LOGS")  
+                break
+            else:
+                Utils.printNotiMessage(task.getToolName() + " SCAN SUCESSFUL")  
         

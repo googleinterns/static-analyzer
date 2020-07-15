@@ -1,10 +1,12 @@
-{ 
+{  
+
 
 "tools":{ 
 
         "SonarQube": {
             "toolName":"SonarQube",  
-            "fileTypes": ["Java"], 
+            "fileTypes": ["java"],  
+            "invokeCommands": ["/home/aagubuzo/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner"],
             "method":"API",  
             "requestCommands": ["http://localhost:9000/api/issues/search?componentKeys=test1"], 
             "mapping": { 

@@ -23,10 +23,9 @@ class ReportReader:
         #for each report object create vulnarbitly objects 
         #create big strings from vulnrability objects
        
-    def __init__(self, schedule): 
+    def __init__(self, schedule, intFile): 
         self.__schedule = schedule   
-        with open("internalFile.json","r") as fp:  
-            self.__intFile = json.load(fp)  
+        self.__intFile = intFile
         
          
 
