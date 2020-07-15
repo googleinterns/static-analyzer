@@ -1,0 +1,83 @@
+2020.07.10 15:19:29 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.10 15:19:31 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+2020.07.10 15:19:34 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+2020.07.10 15:19:34 INFO  web[][o.s.s.app.WebServer] WebServer stopped
+2020.07.10 15:52:41 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2020.07.10 15:52:43 INFO  web[][o.a.t.u.n.NioSelectorPool] Using a shared selector for servlet write/read
+2020.07.10 15:52:46 INFO  web[][o.e.p.PluginsService] no modules loaded
+2020.07.10 15:52:46 INFO  web[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.10 15:52:46 INFO  web[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.10 15:52:46 INFO  web[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.10 15:52:49 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.10 15:52:49 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 8.3.1.34397 / 054c18b025be038b6343115894bf3ade0508f1e9
+2020.07.10 15:52:50 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.10 15:52:51 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /home/aagubuzo/sonarqube-8.3.1.34397/data
+2020.07.10 15:52:51 INFO  web[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.10 15:52:51 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.10 15:52:54 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/sonarqube-8.3.1.34397
+2020.07.10 15:52:54 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin C# Code Quality and Security / 8.6.1.17183 / e9f4299031df68d8c4be6ba670fd4c0395eebf76
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin Git / 1.11.1.2008 / 204dc9b2cc33ec6b780303f926234eed26aea67d
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin JaCoCo / 1.1.0.898 / f65b288e6c2888393bd7fb72ad7ac1425f88eebf
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin Java Code Quality and Security / 6.3.0.21585 / ecf8f9f571691771e6789b8e59ff5e6b4ef36ad8
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarCSS / 1.2.0.1325 / 8dc9fe17b6230c20715d3b4cb34e0b6d02151afd
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarFlex / 2.5.1.1831 / a0c44437f6abb0feec76edd073f91fec64db2a6c
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarGo / 1.6.0.719 / edcc6a9e42fcdd30bb6f84a779c6cd7009ec72fd
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarHTML / 3.2.0.2082 / 997a51b39c4d0a5399c73a8fb729030a69eb392b
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarJS / 6.2.0.12043 / 8b9c1eb83d6ecfd2eda2cc3798e593900b6735fd
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarKotlin / 1.5.0.315 / 4ff3a145a58f3f84f1b39846a205a129d742e993
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarPHP / 3.3.0.5166 / 88e11dffb965aeef9d5bdd6d8413f394d35fecba
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarPython / 2.8.0.6204 / 5600d1ed780882d2362bedb3604dbad7ea63eb27
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarRuby / 1.5.0.315 / 4ff3a145a58f3f84f1b39846a205a129d742e993
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarScala / 1.5.0.315 / 4ff3a145a58f3f84f1b39846a205a129d742e993
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarTS / 2.1.0.4359 / 268ba9581b700c4fb2bc194d4069d283da915213
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin SonarXML / 2.0.1.2020 / c5b84004face582d56f110e24c29bf9c6a679e69
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin Svn / 1.9.0.1295 / 942e075773975354e32691a60bfd968065703e04
+2020.07.10 15:52:55 INFO  web[][o.s.s.p.ServerPluginRepository] Deploy plugin VB.NET Code Quality and Security / 8.6.1.17183 / e9f4299031df68d8c4be6ba670fd4c0395eebf76
+2020.07.10 15:52:57 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@5088af47 [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2020.07.10 15:52:57 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2020.07.10 15:53:02 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2020.07.10 15:53:04 INFO  web[][o.s.s.s.LogServerId] Server ID: BF41A1F2-AXMuuswXQxSe0PHI1WFU
+2020.07.10 15:53:04 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2020.07.10 15:53:04 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2020.07.10 15:53:04 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/permissions/search_templates
+2020.07.10 15:53:05 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2020.07.10 15:53:05 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2020.07.10 15:53:05 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2020.07.10 15:53:05 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2020.07.10 15:53:05 INFO  web[][o.s.s.s.RegisterMetrics] Register metrics
+2020.07.10 15:53:05 INFO  web[][o.s.s.r.RegisterRules] Register rules
+2020.07.10 15:53:25 INFO  web[][o.s.s.q.BuiltInQProfileRepositoryImpl] Load quality profiles
+2020.07.10 15:53:27 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2020.07.10 15:53:27 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile css/Sonar way
+2020.07.10 15:53:28 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile scala/Sonar way
+2020.07.10 15:53:28 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile jsp/Sonar way
+2020.07.10 15:53:28 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile kotlin/Sonar way
+2020.07.10 15:53:28 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile go/Sonar way
+2020.07.10 15:53:28 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile js/Sonar way
+2020.07.10 15:53:29 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile js/Sonar way Recommended
+2020.07.10 15:53:29 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile py/Sonar way
+2020.07.10 15:53:29 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ruby/Sonar way
+2020.07.10 15:53:29 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile cs/Sonar way
+2020.07.10 15:53:30 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile java/Sonar way
+2020.07.10 15:53:30 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile web/Sonar way
+2020.07.10 15:53:30 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile xml/Sonar way
+2020.07.10 15:53:30 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile flex/Sonar way
+2020.07.10 15:53:31 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Sonar way
+2020.07.10 15:53:31 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/PSR-2
+2020.07.10 15:53:31 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Drupal
+2020.07.10 15:53:31 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile vbnet/Sonar way
+2020.07.10 15:53:31 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ts/Sonar way
+2020.07.10 15:53:31 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ts/Sonar way recommended
+2020.07.10 15:53:32 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2020.07.10 15:53:32 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@15483bbd [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@74686589 [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@1064af66 [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@7da8ea03 [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@2129d8d8 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@df1267c [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@6ca95494 [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2020.07.10 15:53:32 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning is not started as there are no projects in this situation.
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2020.07.10 15:53:32 INFO  web[][o.s.s.p.Platform] WebServer is operational
