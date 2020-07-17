@@ -21,7 +21,7 @@ class Scheduler:
                 if ext in toolsObj[tool]["fileTypes"]: 
                     tools.remove(tool) 
                     schedule.append(Task(tool,toolsObj[tool]["invokeCommands"])) 
-
+        print(schedule)
         return schedule
 
 

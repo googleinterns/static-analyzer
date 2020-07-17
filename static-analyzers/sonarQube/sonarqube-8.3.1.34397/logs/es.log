@@ -1,29 +1,969 @@
-2020.07.15 10:30:50 INFO  es[][o.e.n.Node] stopping ...
-2020.07.15 10:30:52 INFO  es[][o.e.n.Node] stopped
-2020.07.15 10:30:52 INFO  es[][o.e.n.Node] closing ...
-2020.07.15 10:30:52 INFO  es[][o.e.n.Node] closed
-2020.07.15 12:19:38 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [78.1gb], net total_space [89.5gb], types [btrfs]
-2020.07.15 12:19:38 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
-2020.07.15 12:19:38 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
-2020.07.15 12:19:38 INFO  es[][o.e.n.Node] version[6.8.4], pid[3339], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
-2020.07.15 12:19:38 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
-2020.07.15 12:19:39 INFO  es[][o.e.p.PluginsService] no plugins loaded
-2020.07.15 12:19:42 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
-2020.07.15 12:19:43 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
-2020.07.15 12:19:44 INFO  es[][o.e.n.Node] initialized
-2020.07.15 12:19:44 INFO  es[][o.e.n.Node] starting ...
-2020.07.15 12:19:44 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
-2020.07.15 12:19:47 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{_7DKnZFtTDmMlDCHwcwNuw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
-2020.07.15 12:19:47 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{_7DKnZFtTDmMlDCHwcwNuw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{_7DKnZFtTDmMlDCHwcwNuw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
-2020.07.15 12:19:47 INFO  es[][o.e.n.Node] started
-2020.07.15 12:19:48 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
-2020.07.15 12:19:52 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
-2020.07.15 12:22:08 WARN  es[][o.e.d.i.q.BoolQueryBuilder] Should clauses in the filter context will no longer automatically set the minimum should match to 1 in the next major version. You should group them in a [filter] clause or explicitly set [minimum_should_match] to 1 to restore this behavior in the next major version.
+2020.07.16 13:29:10 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.3gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 13:29:10 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 13:29:11 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 13:29:11 INFO  es[][o.e.n.Node] version[6.8.4], pid[6057], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 13:29:11 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 13:29:12 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 13:29:16 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 13:29:18 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 13:29:19 INFO  es[][o.e.n.Node] initialized
+2020.07.16 13:29:19 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 13:29:19 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 13:29:22 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{xWY_bmpxSmCvPhxNF2w-Cg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 13:29:22 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{xWY_bmpxSmCvPhxNF2w-Cg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{xWY_bmpxSmCvPhxNF2w-Cg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 13:29:22 INFO  es[][o.e.n.Node] started
+2020.07.16 13:29:23 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 13:29:28 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0]] ...]).
+2020.07.16 13:31:23 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 13:31:24 INFO  es[][o.e.n.Node] stopped
+2020.07.16 13:31:24 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 13:31:24 INFO  es[][o.e.n.Node] closed
+2020.07.16 13:31:39 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.2gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 13:31:39 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 13:31:39 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 13:31:39 INFO  es[][o.e.n.Node] version[6.8.4], pid[6828], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 13:31:39 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 13:31:40 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 13:31:43 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 13:31:45 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 13:31:45 INFO  es[][o.e.n.Node] initialized
+2020.07.16 13:31:45 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 13:31:45 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 13:31:49 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{UGRZOdw3T9q8wXOcjfx90Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 13:31:49 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{UGRZOdw3T9q8wXOcjfx90Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{UGRZOdw3T9q8wXOcjfx90Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 13:31:49 INFO  es[][o.e.n.Node] started
+2020.07.16 13:31:50 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 13:31:54 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 13:44:59 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 13:44:59 INFO  es[][o.e.n.Node] stopped
+2020.07.16 13:44:59 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 13:44:59 INFO  es[][o.e.n.Node] closed
+2020.07.16 13:45:13 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.3gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 13:45:13 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 13:45:13 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 13:45:13 INFO  es[][o.e.n.Node] version[6.8.4], pid[9408], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 13:45:13 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 13:45:15 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 13:45:19 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 13:45:20 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 13:45:21 INFO  es[][o.e.n.Node] initialized
+2020.07.16 13:45:21 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 13:45:21 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 13:45:25 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{RkuHBKcmS6yYMGxttZNAlA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 13:45:25 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{RkuHBKcmS6yYMGxttZNAlA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{RkuHBKcmS6yYMGxttZNAlA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 13:45:25 INFO  es[][o.e.n.Node] started
+2020.07.16 13:45:26 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 13:45:29 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 14:09:28 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 14:09:30 INFO  es[][o.e.n.Node] stopped
+2020.07.16 14:09:30 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 14:09:30 INFO  es[][o.e.n.Node] closed
+2020.07.16 14:09:43 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.3gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 14:09:43 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 14:09:43 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 14:09:43 INFO  es[][o.e.n.Node] version[6.8.4], pid[10924], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 14:09:43 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 14:09:45 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 14:09:51 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 14:09:55 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 14:09:56 INFO  es[][o.e.n.Node] initialized
+2020.07.16 14:09:56 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 14:09:57 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 14:10:00 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{o6RrytNYRoqeyBpxV9kbiw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 14:10:00 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{o6RrytNYRoqeyBpxV9kbiw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{o6RrytNYRoqeyBpxV9kbiw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 14:10:00 INFO  es[][o.e.n.Node] started
+2020.07.16 14:10:02 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 14:10:07 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0], [components][3], [components][4], [metadatas][0]] ...]).
+2020.07.16 14:47:14 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 14:47:15 INFO  es[][o.e.n.Node] stopped
+2020.07.16 14:47:15 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 14:47:15 INFO  es[][o.e.n.Node] closed
+2020.07.16 15:19:45 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 15:19:46 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 15:19:46 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 15:19:46 INFO  es[][o.e.n.Node] version[6.8.4], pid[2084], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 15:19:46 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 15:19:47 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 15:19:50 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 15:19:51 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 15:19:52 INFO  es[][o.e.n.Node] initialized
+2020.07.16 15:19:52 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 15:19:52 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 15:19:55 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{K9_VdKgVTSKUEyndEl9sKQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 15:19:55 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{K9_VdKgVTSKUEyndEl9sKQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{K9_VdKgVTSKUEyndEl9sKQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 15:19:55 INFO  es[][o.e.n.Node] started
+2020.07.16 15:19:56 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 15:19:58 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0], [metadatas][0]] ...]).
+2020.07.16 15:26:51 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 15:26:51 INFO  es[][o.e.n.Node] stopped
+2020.07.16 15:26:51 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 15:26:51 INFO  es[][o.e.n.Node] closed
+2020.07.16 18:02:46 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 18:02:46 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 18:02:46 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 18:02:46 INFO  es[][o.e.n.Node] version[6.8.4], pid[4209], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 18:02:46 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 18:02:48 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 18:02:51 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 18:02:52 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 18:02:53 INFO  es[][o.e.n.Node] initialized
+2020.07.16 18:02:53 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 18:02:53 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 18:02:56 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{S90hLOGQTbK0HR6DjtA3_w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 18:02:56 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{S90hLOGQTbK0HR6DjtA3_w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{S90hLOGQTbK0HR6DjtA3_w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 18:02:56 INFO  es[][o.e.n.Node] started
+2020.07.16 18:02:57 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 18:03:02 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][2]] ...]).
+2020.07.16 18:08:04 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 18:08:05 INFO  es[][o.e.n.Node] stopped
+2020.07.16 18:08:05 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 18:08:05 INFO  es[][o.e.n.Node] closed
+2020.07.16 18:08:14 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 18:08:14 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 18:08:14 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 18:08:14 INFO  es[][o.e.n.Node] version[6.8.4], pid[5230], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 18:08:14 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 18:08:16 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 18:08:19 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 18:08:21 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 18:08:22 INFO  es[][o.e.n.Node] initialized
+2020.07.16 18:08:22 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 18:08:22 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 18:08:26 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{hyAXbivrQUOAnPdi4zbacQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 18:08:26 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{hyAXbivrQUOAnPdi4zbacQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{hyAXbivrQUOAnPdi4zbacQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 18:08:26 INFO  es[][o.e.n.Node] started
+2020.07.16 18:08:27 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 18:08:31 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][4], [components][2], [metadatas][0]] ...]).
+2020.07.16 18:17:25 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 18:17:26 INFO  es[][o.e.n.Node] stopped
+2020.07.16 18:17:26 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 18:17:26 INFO  es[][o.e.n.Node] closed
+2020.07.16 18:17:34 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 18:17:34 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 18:17:34 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 18:17:34 INFO  es[][o.e.n.Node] version[6.8.4], pid[6196], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 18:17:34 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 18:17:35 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 18:17:38 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 18:17:40 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 18:17:41 INFO  es[][o.e.n.Node] initialized
+2020.07.16 18:17:41 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 18:17:41 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 18:17:44 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{9oeqD_iuQ2et4bdIpOR8vQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 18:17:44 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{9oeqD_iuQ2et4bdIpOR8vQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{9oeqD_iuQ2et4bdIpOR8vQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 18:17:44 INFO  es[][o.e.n.Node] started
+2020.07.16 18:17:46 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 18:17:49 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0]] ...]).
+2020.07.16 18:35:51 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 18:35:51 INFO  es[][o.e.n.Node] stopped
+2020.07.16 18:35:51 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 18:35:51 INFO  es[][o.e.n.Node] closed
+2020.07.16 18:36:01 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 18:36:01 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 18:36:01 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 18:36:01 INFO  es[][o.e.n.Node] version[6.8.4], pid[7148], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 18:36:01 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 18:36:02 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 18:36:05 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 18:36:07 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 18:36:07 INFO  es[][o.e.n.Node] initialized
+2020.07.16 18:36:07 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 18:36:07 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 18:36:10 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{bqm27ysITDqYt452lVmExQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 18:36:10 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{bqm27ysITDqYt452lVmExQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{bqm27ysITDqYt452lVmExQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 18:36:10 INFO  es[][o.e.n.Node] started
+2020.07.16 18:36:12 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 18:36:17 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 18:37:04 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 18:37:04 INFO  es[][o.e.n.Node] stopped
+2020.07.16 18:37:04 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 18:37:04 INFO  es[][o.e.n.Node] closed
+2020.07.16 18:37:13 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 18:37:13 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 18:37:13 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 18:37:13 INFO  es[][o.e.n.Node] version[6.8.4], pid[8067], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 18:37:13 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 18:37:15 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 18:37:19 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 18:37:21 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 18:37:22 INFO  es[][o.e.n.Node] initialized
+2020.07.16 18:37:22 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 18:37:22 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 18:37:26 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{32KhtjaKQY6M0H6Bl59kmA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 18:37:26 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{32KhtjaKQY6M0H6Bl59kmA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{32KhtjaKQY6M0H6Bl59kmA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 18:37:26 INFO  es[][o.e.n.Node] started
+2020.07.16 18:37:27 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 18:37:31 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 18:38:35 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 18:38:36 INFO  es[][o.e.n.Node] stopped
+2020.07.16 18:38:36 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 18:38:36 INFO  es[][o.e.n.Node] closed
+2020.07.16 18:38:44 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 18:38:44 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 18:38:44 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 18:38:44 INFO  es[][o.e.n.Node] version[6.8.4], pid[8972], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 18:38:44 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 18:38:45 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 18:38:49 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 18:38:50 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 18:38:51 INFO  es[][o.e.n.Node] initialized
+2020.07.16 18:38:51 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 18:38:51 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 18:38:55 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{xe3Q1_kVT32Qf0EviE0PMA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 18:38:55 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{xe3Q1_kVT32Qf0EviE0PMA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{xe3Q1_kVT32Qf0EviE0PMA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 18:38:55 INFO  es[][o.e.n.Node] started
+2020.07.16 18:38:55 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 18:39:00 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 18:45:12 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 18:45:14 INFO  es[][o.e.n.Node] stopped
+2020.07.16 18:45:14 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 18:45:14 INFO  es[][o.e.n.Node] closed
+2020.07.16 18:45:26 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 18:45:26 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 18:45:26 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 18:45:26 INFO  es[][o.e.n.Node] version[6.8.4], pid[9900], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 18:45:26 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 18:45:27 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 18:45:30 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 18:45:32 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 18:45:32 INFO  es[][o.e.n.Node] initialized
+2020.07.16 18:45:32 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 18:45:33 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 18:45:36 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{y21m1WQnR6CXHTbcnwgv0Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 18:45:36 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{y21m1WQnR6CXHTbcnwgv0Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{y21m1WQnR6CXHTbcnwgv0Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 18:45:36 INFO  es[][o.e.n.Node] started
+2020.07.16 18:45:37 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 18:45:44 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 19:00:55 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:00:55 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:00:55 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:00:55 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:01:06 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:01:06 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:01:07 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:01:07 INFO  es[][o.e.n.Node] version[6.8.4], pid[10889], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:01:07 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:01:08 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:01:11 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:01:13 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:01:14 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:01:14 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:01:14 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:01:17 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{tDjU9HiBQuivSo4NxwTcMQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:01:17 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{tDjU9HiBQuivSo4NxwTcMQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{tDjU9HiBQuivSo4NxwTcMQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:01:17 INFO  es[][o.e.n.Node] started
+2020.07.16 19:01:18 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:01:20 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 19:02:58 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:02:58 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:02:58 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:02:58 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:03:09 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:03:09 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:03:09 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:03:09 INFO  es[][o.e.n.Node] version[6.8.4], pid[11798], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:03:09 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:03:11 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:03:14 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:03:15 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:03:16 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:03:16 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:03:16 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:03:19 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{YcGTczBjQWe6zSjFM_8xCg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:03:19 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{YcGTczBjQWe6zSjFM_8xCg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{YcGTczBjQWe6zSjFM_8xCg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:03:19 INFO  es[][o.e.n.Node] started
+2020.07.16 19:03:20 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:03:26 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 19:04:20 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:04:22 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:04:22 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:04:22 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:04:43 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:04:43 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:04:43 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:04:43 INFO  es[][o.e.n.Node] version[6.8.4], pid[12645], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:04:43 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:04:44 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:04:48 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:04:49 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:04:49 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:04:49 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:04:49 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:04:53 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{C9RQZEIGQfumVa7zX07T1Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:04:53 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{C9RQZEIGQfumVa7zX07T1Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{C9RQZEIGQfumVa7zX07T1Q}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:04:53 INFO  es[][o.e.n.Node] started
+2020.07.16 19:04:54 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:05:01 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][4]] ...]).
+2020.07.16 19:08:10 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:08:11 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:08:11 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:08:11 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:08:24 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:08:24 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:08:24 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:08:24 INFO  es[][o.e.n.Node] version[6.8.4], pid[13298], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:08:24 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:08:25 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:08:29 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:08:31 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:08:32 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:08:32 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:08:32 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:08:36 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{H9Qkz3MpQGOWLkjMaxu42w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:08:36 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{H9Qkz3MpQGOWLkjMaxu42w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{H9Qkz3MpQGOWLkjMaxu42w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:08:36 INFO  es[][o.e.n.Node] started
+2020.07.16 19:08:37 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:08:39 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:08:40 WARN  es[][o.e.c.a.s.ShardStateAction] unexpected failure while sending request [internal:cluster/shard/started] to [{sonarqube}{MRCJgcl3QKW6i7pplNd87A}{H9Qkz3MpQGOWLkjMaxu42w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}] for shard entry [StartedShardEntry{shardId [[rules][1]], allocationId [QY4GF3ieSuWr59fo4R1UOQ], primary term [23], message [after existing store recovery; bootstrap_history_uuid=false]}]
+org.elasticsearch.transport.SendRequestTransportException: [sonarqube][127.0.0.1:9001][internal:cluster/shard/started]
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:644) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:542) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:517) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.sendShardAction(ShardStateAction.java:117) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:487) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.cluster.action.shard.ShardStateAction.shardStarted(ShardStateAction.java:478) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.indices.cluster.IndicesClusterStateService$RecoveryListener.onRecoveryDone(IndicesClusterStateService.java:710) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.index.shard.IndexShard.lambda$startRecovery$9(IndexShard.java:2393) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:681) ~[elasticsearch-6.8.4.jar:6.8.4]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: org.elasticsearch.transport.TransportException: TransportService is closed stopped can't send request
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:626) ~[elasticsearch-6.8.4.jar:6.8.4]
+	... 11 more
+2020.07.16 19:08:40 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:08:40 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:08:40 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:08:51 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:08:51 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:08:51 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:08:51 INFO  es[][o.e.n.Node] version[6.8.4], pid[13755], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:08:51 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:08:52 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:08:56 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:08:57 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:08:58 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:08:58 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:08:58 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:09:01 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{yqez-tNCSH-DaMpwd1Xkvg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:09:01 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{yqez-tNCSH-DaMpwd1Xkvg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{yqez-tNCSH-DaMpwd1Xkvg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:09:01 INFO  es[][o.e.n.Node] started
+2020.07.16 19:09:03 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:09:07 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 19:15:55 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:15:59 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:15:59 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:15:59 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:17:03 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:17:03 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:17:03 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:17:03 INFO  es[][o.e.n.Node] version[6.8.4], pid[15092], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:17:03 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:17:04 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:17:07 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:17:09 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:17:09 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:17:09 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:17:10 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:17:13 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{6yy-doI2QS2w0h5s5Xq2hQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:17:13 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{6yy-doI2QS2w0h5s5Xq2hQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{6yy-doI2QS2w0h5s5Xq2hQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:17:13 INFO  es[][o.e.n.Node] started
+2020.07.16 19:17:14 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:17:19 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0]] ...]).
+2020.07.16 19:19:51 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:19:52 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:19:52 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:19:52 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:20:02 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:20:02 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:20:02 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:20:02 INFO  es[][o.e.n.Node] version[6.8.4], pid[15946], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:20:02 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:20:03 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:20:06 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:20:07 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:20:08 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:20:08 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:20:08 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:20:11 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{lTHa6RiHRlCr-z-Pvei4lg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:20:11 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{lTHa6RiHRlCr-z-Pvei4lg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{lTHa6RiHRlCr-z-Pvei4lg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:20:11 INFO  es[][o.e.n.Node] started
+2020.07.16 19:20:12 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:20:18 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 19:21:32 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 19:21:32 INFO  es[][o.e.n.Node] stopped
+2020.07.16 19:21:32 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 19:21:32 INFO  es[][o.e.n.Node] closed
+2020.07.16 19:21:50 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 19:21:50 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 19:21:50 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 19:21:50 INFO  es[][o.e.n.Node] version[6.8.4], pid[16811], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 19:21:50 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 19:21:52 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 19:21:55 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 19:21:56 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 19:21:57 INFO  es[][o.e.n.Node] initialized
+2020.07.16 19:21:57 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 19:21:57 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 19:22:00 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{1-VLHKLWS8CAVDjg8jyXIw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 19:22:00 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{1-VLHKLWS8CAVDjg8jyXIw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{1-VLHKLWS8CAVDjg8jyXIw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 19:22:00 INFO  es[][o.e.n.Node] started
+2020.07.16 19:22:01 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 19:22:07 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0], [metadatas][0]] ...]).
+2020.07.16 20:00:02 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:00:02 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:00:02 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:00:02 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:00:17 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:00:17 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:00:18 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:00:18 INFO  es[][o.e.n.Node] version[6.8.4], pid[18202], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:00:18 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:00:19 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:00:22 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:00:24 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:00:49 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:00:49 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:00:49 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:00:49 INFO  es[][o.e.n.Node] version[6.8.4], pid[18605], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:00:49 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:00:50 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:00:54 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:00:56 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:01:07 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:01:07 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:01:07 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:01:07 INFO  es[][o.e.n.Node] version[6.8.4], pid[18968], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:01:07 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:01:08 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:01:12 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:01:15 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:01:16 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:01:16 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:01:17 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:01:20 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{NNUm9-BASJi1oep7EGgLPw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:01:20 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{NNUm9-BASJi1oep7EGgLPw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{NNUm9-BASJi1oep7EGgLPw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:01:20 INFO  es[][o.e.n.Node] started
+2020.07.16 20:01:20 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:01:27 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][2], [components][4], [metadatas][0]] ...]).
+2020.07.16 20:02:01 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:02:02 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:02:02 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:02:02 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:02:15 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.6gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:02:15 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:02:15 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:02:15 INFO  es[][o.e.n.Node] version[6.8.4], pid[19739], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:02:15 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:02:16 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:02:21 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:02:23 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:02:24 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:02:24 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:02:24 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:02:27 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{c57PJ-0iSySkzRtjiXZ3JA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:02:27 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{c57PJ-0iSySkzRtjiXZ3JA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{c57PJ-0iSySkzRtjiXZ3JA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:02:27 INFO  es[][o.e.n.Node] started
+2020.07.16 20:02:28 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:02:34 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 20:03:07 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:03:07 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:03:07 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:03:07 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:03:19 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.6gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:03:19 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:03:20 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:03:20 INFO  es[][o.e.n.Node] version[6.8.4], pid[20419], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:03:20 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:03:20 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:03:24 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:03:26 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:03:27 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:03:27 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:03:27 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:03:30 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{htgZUOBZSHSiu06XXLtgAg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:03:30 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{htgZUOBZSHSiu06XXLtgAg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{htgZUOBZSHSiu06XXLtgAg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:03:30 INFO  es[][o.e.n.Node] started
+2020.07.16 20:03:31 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:03:36 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 20:03:52 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:03:52 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:03:52 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:03:52 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:04:06 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.6gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:04:06 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:04:06 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:04:06 INFO  es[][o.e.n.Node] version[6.8.4], pid[20985], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:04:06 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:04:07 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:04:10 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:04:12 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:04:13 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:04:13 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:04:13 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:04:17 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{uZklbyARSgq8vG4CiMYsvA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:04:17 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{uZklbyARSgq8vG4CiMYsvA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{uZklbyARSgq8vG4CiMYsvA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:04:17 INFO  es[][o.e.n.Node] started
+2020.07.16 20:04:18 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:04:24 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][3]] ...]).
+2020.07.16 20:04:36 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:04:38 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:04:38 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:04:38 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:04:50 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.6gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:04:50 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:04:50 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:04:50 INFO  es[][o.e.n.Node] version[6.8.4], pid[21698], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:04:50 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:04:52 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:04:55 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:04:57 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:04:58 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:04:58 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:04:58 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:05:01 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{Eo6PCl2HS0CM53nqmRawYg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:05:01 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{Eo6PCl2HS0CM53nqmRawYg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{Eo6PCl2HS0CM53nqmRawYg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:05:01 INFO  es[][o.e.n.Node] started
+2020.07.16 20:05:02 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:05:11 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][2], [components][4], [components][0], [metadatas][0]] ...]).
+2020.07.16 20:05:21 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:05:22 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:05:22 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:05:22 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:05:40 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:05:40 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:05:40 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:05:40 INFO  es[][o.e.n.Node] version[6.8.4], pid[22338], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:05:40 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:05:41 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:05:44 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:05:46 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:05:47 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:05:47 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:05:47 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:05:50 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{Chx7vVM2TZCPzcYUf34mpA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:05:50 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{Chx7vVM2TZCPzcYUf34mpA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{Chx7vVM2TZCPzcYUf34mpA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:05:50 INFO  es[][o.e.n.Node] started
+2020.07.16 20:05:51 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:05:59 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0], [metadatas][0]] ...]).
+2020.07.16 20:06:39 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:06:39 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:06:39 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:06:39 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:06:52 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.6gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:06:52 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:06:53 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:06:53 INFO  es[][o.e.n.Node] version[6.8.4], pid[23189], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:06:53 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:06:53 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:06:57 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:06:59 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:06:59 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:06:59 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:06:59 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:07:03 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{clMY-agTSEybRrsx0obJIQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:07:03 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{clMY-agTSEybRrsx0obJIQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{clMY-agTSEybRrsx0obJIQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:07:03 INFO  es[][o.e.n.Node] started
+2020.07.16 20:07:03 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:07:08 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][1], [components][3], [metadatas][0], [components][0]] ...]).
+2020.07.16 20:08:15 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:08:16 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:08:16 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:08:16 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:09:28 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:09:28 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:09:29 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:09:29 INFO  es[][o.e.n.Node] version[6.8.4], pid[24120], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:09:29 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:09:30 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:09:33 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:09:34 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:09:35 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:09:35 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:09:35 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:09:38 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{fy7MhdizRFKZADll0qMUgA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:09:38 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{fy7MhdizRFKZADll0qMUgA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{fy7MhdizRFKZADll0qMUgA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:09:38 INFO  es[][o.e.n.Node] started
+2020.07.16 20:09:40 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:09:46 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 20:10:58 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:10:59 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:10:59 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:10:59 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:11:13 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:11:13 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:11:13 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:11:13 INFO  es[][o.e.n.Node] version[6.8.4], pid[25087], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:11:13 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:11:14 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:11:18 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:11:19 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:11:20 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:11:20 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:11:20 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:11:23 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{msKyMlrWTCWJ0Zgg44ZPDw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:11:23 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{msKyMlrWTCWJ0Zgg44ZPDw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{msKyMlrWTCWJ0Zgg44ZPDw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:11:23 INFO  es[][o.e.n.Node] started
+2020.07.16 20:11:25 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:11:33 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 20:12:43 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:12:44 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:12:44 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:12:44 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:12:59 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.5gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:12:59 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:13:00 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:13:00 INFO  es[][o.e.n.Node] version[6.8.4], pid[26025], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:13:00 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:13:01 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:13:05 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:13:06 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:13:07 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:13:07 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:13:07 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:13:10 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{ggNhiWRBTK6UWouWBGzOqg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:13:10 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{ggNhiWRBTK6UWouWBGzOqg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{ggNhiWRBTK6UWouWBGzOqg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:13:10 INFO  es[][o.e.n.Node] started
+2020.07.16 20:13:12 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:13:17 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 20:18:24 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:18:24 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:18:24 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:18:24 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:19:05 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:19:05 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:19:05 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:19:05 INFO  es[][o.e.n.Node] version[6.8.4], pid[27485], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:19:05 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:19:06 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:19:10 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:19:11 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:19:12 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:19:12 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:19:12 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:19:15 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{mUHsdgYSSgmrMkAkaNSs4w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:19:15 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{mUHsdgYSSgmrMkAkaNSs4w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{mUHsdgYSSgmrMkAkaNSs4w}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:19:15 INFO  es[][o.e.n.Node] started
+2020.07.16 20:19:16 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:19:21 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 20:22:16 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:22:17 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:22:17 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:22:17 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:22:30 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:22:30 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:22:30 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:22:30 INFO  es[][o.e.n.Node] version[6.8.4], pid[28601], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:22:30 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:22:32 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:22:36 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:22:38 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:22:38 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:22:38 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:22:38 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:22:41 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{XoVYusWVTkKH5alu2i73Ng}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:22:41 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{XoVYusWVTkKH5alu2i73Ng}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{XoVYusWVTkKH5alu2i73Ng}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:22:41 INFO  es[][o.e.n.Node] started
+2020.07.16 20:22:42 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:22:46 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][8] overhead, spent [252ms] collecting in the last [1s]
+2020.07.16 20:22:50 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.07.16 20:27:43 INFO  es[][o.e.n.Node] stopping ...
+2020.07.16 20:27:44 INFO  es[][o.e.n.Node] stopped
+2020.07.16 20:27:44 INFO  es[][o.e.n.Node] closing ...
+2020.07.16 20:27:44 INFO  es[][o.e.n.Node] closed
+2020.07.16 20:28:12 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/vdb)]], net usable_space [77.4gb], net total_space [89.5gb], types [btrfs]
+2020.07.16 20:28:12 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.07.16 20:28:12 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [MRCJgcl3QKW6i7pplNd87A]
+2020.07.16 20:28:12 INFO  es[][o.e.n.Node] version[6.8.4], pid[29972], build[default/tar/bca0c8d/2019-10-16T06:19:49.319352Z], OS[Linux/4.19.113-08528-g5803a1c7e9f9/amd64], JVM[Debian/OpenJDK 64-Bit Server VM/11.0.7/11.0.7+10-post-Debian-3deb10u1]
+2020.07.16 20:28:12 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch, -Des.path.conf=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.07.16 20:28:13 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.07.16 20:28:16 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.07.16 20:28:17 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.07.16 20:28:18 INFO  es[][o.e.n.Node] initialized
+2020.07.16 20:28:18 INFO  es[][o.e.n.Node] starting ...
+2020.07.16 20:28:18 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.07.16 20:28:22 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{tIPHSKO0QnacTpgJFOhXyA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.07.16 20:28:22 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{tIPHSKO0QnacTpgJFOhXyA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{MRCJgcl3QKW6i7pplNd87A}{tIPHSKO0QnacTpgJFOhXyA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.07.16 20:28:22 INFO  es[][o.e.n.Node] started
+2020.07.16 20:28:23 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.07.16 20:28:26 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][4]] ...]).

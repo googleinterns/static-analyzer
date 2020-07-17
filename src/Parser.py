@@ -16,7 +16,7 @@ from ReportReader import ReportReader
 
 
 
-
+#kicks off the whole program
 def start():   
     #process arugments 
     processArgs()  
@@ -38,7 +38,11 @@ def start():
      
     #runs engine  
     engine = Engine(schedule) 
-    engine.run()  
+    scanSucsess = engine.run()   
+
+    print(scanSucsess)
+    if scanSucsess == False:
+        Utils.printNotiMessage("All Scans Weren't Sucsessful")
 
     #generate report 
     reportReader = ReportReader(schedule=schedule,intFile=intFile)
@@ -109,14 +113,11 @@ def repoOptionFunc(location):
     try: 
         shutil.copytree(location[0], "../mem/temp")  
     except FileExistsError as excp:
-        Utils.printErrorMessage(message="TEMP ALREADY EXISTES PLEASE RENAME OR DELETE") 
-        exit(1) 
+        Utils.quitInError("TEMP ALREADY EXISTES PLEASE RENAME OR DELETE") 
     except FileNotFoundError as excp: 
-        Utils.printErrorMessage(message="PATH TO SRC DOSEN'T EXIST") 
-        exit(1)
+        Utils.quitInError("PATH TO SRC DOSEN'T EXIST")
     except shutil.Error as excp: 
-        Utils.printErrorMessage(message ="CHOULDN'T COPY FILES TO SCAN") 
-        exit(1)  
+        Utils.quitInError("CHOULDN'T COPY FILES TO SCAN")
 
 def listOptionFunc(list):   
     return "nil"

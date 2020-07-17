@@ -6,7 +6,9 @@
         "SonarQube": {
             "toolName":"SonarQube",  
             "fileTypes": ["java"],  
-            "invokeCommands": ["../../static-analyzers/sonarQube/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner"],
+            "invokeCommands": ["../../static-analyzers/sonarQube/sonarqube-8.3.1.34397/bin/linux-x86-64/sonar.sh start",
+                                "python3 ../../static-analyzers/sonarQube/scripts/waitForServer.py 300", 
+                                "../../static-analyzers/sonarQube/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner -X"],
             "method":"API",  
             "requestCommands": ["http://localhost:9000/api/issues/search?componentKeys=test1"], 
             "mapping": { 

@@ -3,7 +3,9 @@ import time
 import subprocess 
 import os 
 import shutil  
-import Utils
+import Utils  
+import sys
+
 
 class Engine:  
     #TO-DO: 
@@ -24,14 +26,16 @@ class Engine:
        #should be in repo right now 
 
         #run static analyzers 
-        self.__invokeTools(schedule=self.__schedule)
+        return self.__invokeTools(schedule=self.__schedule)
 
        
        
 
 
     #makes a process for each task and runs the task
-    def __invokeTools(self, schedule): 
+    def __invokeTools(self, schedule):  
+        #were tools invoked with no problem 
+        sucsess = True
 
         procs = []    
         Utils.printNotiMessage("BOOTING STATIC ANALYZERS...") 
@@ -47,8 +51,15 @@ class Engine:
 
         #wait for all threads to finish   
         for proc in procs: 
-            proc.join() 
-        Utils.printNotiMessage("SCANS DONE")
+            proc.join()  
+
+        for proc in procs: 
+           if proc.exitcode != 0: 
+                sucsess = False 
+                break 
+
+        Utils.printNotiMessage("SCANS DONE") 
+        return sucsess
 
     #invokes the tool via provided command (absolute path)
     def __invokeTool(self, task): 
@@ -56,11 +67,14 @@ class Engine:
         commands = task.getCommand() 
 
         for command in commands: 
-            #potential security input check??
-            retCode = subprocess.run(command).returncode     
+            #potential security input check?? 
+            retCode = subprocess.run(command,shell = True).returncode
             if (retCode != 0): 
-                Utils.printErrorMessage(task.getToolName() + " SCAN FAILED; CHECK ITS LOGS")  
-                break
-            else:
-                Utils.printNotiMessage(task.getToolName() + " SCAN SUCESSFUL")  
+                Utils.printErrorMessage(task.getToolName() +": SCAN FAILED; CHECK ITS LOGS") 
+                self.terminate()
+
+        
+        if(retCode == 0):
+            Utils.printNotiMessage(task.getToolName() + " SCAN SUCESSFUL") 
+          
         

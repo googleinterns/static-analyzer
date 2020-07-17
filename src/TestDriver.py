@@ -20,5 +20,5 @@ Parser.start()
 #engine.run()
 
 #/home/aagubuzo/testsrc
-
+# /usr/bin/python3 /home/aagubuzo/staticAnaProj/src/Parser.py -r /home/aagubuzo/staticAnaProj/test/testData/src
 

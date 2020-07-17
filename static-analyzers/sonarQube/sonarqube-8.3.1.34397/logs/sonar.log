@@ -458,3 +458,1032 @@ OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in ve
 2020.07.15 12:20:16 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/sonarqube-8.3.1.34397/temp/sq-process10276159437140658320properties
 2020.07.15 12:20:24 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
 2020.07.15 12:20:24 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 12:59:31 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 12:59:31 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 12:59:31 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 12:59:31 ERROR app[][o.s.a.p.ManagedProcessHandler] Fail to launch process [es]
+java.lang.IllegalStateException: Fail to launch process [es]
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:121)
+	at org.sonar.application.ProcessLauncherImpl.launch(ProcessLauncherImpl.java:89)
+	at org.sonar.application.SchedulerImpl.lambda$tryToStartProcess$2(SchedulerImpl.java:196)
+	at org.sonar.application.process.ManagedProcessHandler.start(ManagedProcessHandler.java:73)
+	at org.sonar.application.SchedulerImpl.tryToStartProcess(SchedulerImpl.java:194)
+	at org.sonar.application.SchedulerImpl.tryToStartEs(SchedulerImpl.java:146)
+	at org.sonar.application.SchedulerImpl.tryToStartAll(SchedulerImpl.java:138)
+	at org.sonar.application.SchedulerImpl.schedule(SchedulerImpl.java:112)
+	at org.sonar.application.App.start(App.java:69)
+	at org.sonar.application.App.main(App.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch" (in directory "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch"): error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at org.sonar.application.ProcessLauncherImpl$JavaLangProcessBuilder.start(ProcessLauncherImpl.java:318)
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:119)
+	... 15 common frames omitted
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 18 common frames omitted
+2020.07.16 12:59:31 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 12:59:31 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.07.16 12:59:31 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 13:24:53 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 13:24:53 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 13:24:53 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 13:24:53 ERROR app[][o.s.a.p.ManagedProcessHandler] Fail to launch process [es]
+java.lang.IllegalStateException: Fail to launch process [es]
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:121)
+	at org.sonar.application.ProcessLauncherImpl.launch(ProcessLauncherImpl.java:89)
+	at org.sonar.application.SchedulerImpl.lambda$tryToStartProcess$2(SchedulerImpl.java:196)
+	at org.sonar.application.process.ManagedProcessHandler.start(ManagedProcessHandler.java:73)
+	at org.sonar.application.SchedulerImpl.tryToStartProcess(SchedulerImpl.java:194)
+	at org.sonar.application.SchedulerImpl.tryToStartEs(SchedulerImpl.java:146)
+	at org.sonar.application.SchedulerImpl.tryToStartAll(SchedulerImpl.java:138)
+	at org.sonar.application.SchedulerImpl.schedule(SchedulerImpl.java:112)
+	at org.sonar.application.App.start(App.java:69)
+	at org.sonar.application.App.main(App.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch" (in directory "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch"): error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at org.sonar.application.ProcessLauncherImpl$JavaLangProcessBuilder.start(ProcessLauncherImpl.java:318)
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:119)
+	... 15 common frames omitted
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 18 common frames omitted
+2020.07.16 13:24:53 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 13:24:53 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2020.07.16 13:24:53 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 13:26:13 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 13:26:13 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 13:26:13 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 13:26:13 ERROR app[][o.s.a.p.ManagedProcessHandler] Fail to launch process [es]
+java.lang.IllegalStateException: Fail to launch process [es]
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:121)
+	at org.sonar.application.ProcessLauncherImpl.launch(ProcessLauncherImpl.java:89)
+	at org.sonar.application.SchedulerImpl.lambda$tryToStartProcess$2(SchedulerImpl.java:196)
+	at org.sonar.application.process.ManagedProcessHandler.start(ManagedProcessHandler.java:73)
+	at org.sonar.application.SchedulerImpl.tryToStartProcess(SchedulerImpl.java:194)
+	at org.sonar.application.SchedulerImpl.tryToStartEs(SchedulerImpl.java:146)
+	at org.sonar.application.SchedulerImpl.tryToStartAll(SchedulerImpl.java:138)
+	at org.sonar.application.SchedulerImpl.schedule(SchedulerImpl.java:112)
+	at org.sonar.application.App.start(App.java:69)
+	at org.sonar.application.App.main(App.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch" (in directory "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch"): error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at org.sonar.application.ProcessLauncherImpl$JavaLangProcessBuilder.start(ProcessLauncherImpl.java:318)
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:119)
+	... 15 common frames omitted
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 18 common frames omitted
+2020.07.16 13:26:13 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 13:26:13 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.07.16 13:26:13 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 13:26:16 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 13:26:16 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 13:26:17 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 13:26:17 ERROR app[][o.s.a.p.ManagedProcessHandler] Fail to launch process [es]
+java.lang.IllegalStateException: Fail to launch process [es]
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:121)
+	at org.sonar.application.ProcessLauncherImpl.launch(ProcessLauncherImpl.java:89)
+	at org.sonar.application.SchedulerImpl.lambda$tryToStartProcess$2(SchedulerImpl.java:196)
+	at org.sonar.application.process.ManagedProcessHandler.start(ManagedProcessHandler.java:73)
+	at org.sonar.application.SchedulerImpl.tryToStartProcess(SchedulerImpl.java:194)
+	at org.sonar.application.SchedulerImpl.tryToStartEs(SchedulerImpl.java:146)
+	at org.sonar.application.SchedulerImpl.tryToStartAll(SchedulerImpl.java:138)
+	at org.sonar.application.SchedulerImpl.schedule(SchedulerImpl.java:112)
+	at org.sonar.application.App.start(App.java:69)
+	at org.sonar.application.App.main(App.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Cannot run program "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch" (in directory "/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch"): error=13, Permission denied
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)
+	at org.sonar.application.ProcessLauncherImpl$JavaLangProcessBuilder.start(ProcessLauncherImpl.java:318)
+	at org.sonar.application.ProcessLauncherImpl.launchExternal(ProcessLauncherImpl.java:119)
+	... 15 common frames omitted
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)
+	... 18 common frames omitted
+2020.07.16 13:26:17 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 13:26:17 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2020.07.16 13:26:17 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 13:29:06 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 13:29:06 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 13:29:07 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 13:29:07 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 13:29:07 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 13:29:07 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 13:29:28 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 13:29:28 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process2712707253819759063properties
+2020.07.16 13:30:05 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 13:30:05 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process4804609619286950406properties
+2020.07.16 13:30:18 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 13:30:18 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 13:31:19 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 13:31:22 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 13:31:23 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 13:31:25 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 13:31:25 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 13:31:25 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 13:31:35 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 13:31:35 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 13:31:35 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 13:31:35 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 13:31:36 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 13:31:36 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 13:31:54 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 13:31:54 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process10523430027652896468properties
+2020.07.16 13:32:29 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 13:32:29 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process15855570445186153715properties
+2020.07.16 13:32:39 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 13:32:39 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 13:44:56 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 13:44:57 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 13:44:59 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 13:44:59 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 13:44:59 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 13:44:59 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 13:45:06 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 13:45:06 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 13:45:07 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 13:45:07 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 13:45:08 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 13:45:08 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 13:45:29 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 13:45:29 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process18377659218553675693properties
+2020.07.16 13:46:10 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 13:46:10 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process10867382803953253848properties
+2020.07.16 13:46:20 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 13:46:20 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 14:09:22 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 14:09:25 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 14:09:28 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 14:09:30 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 14:09:30 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 14:09:30 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 14:09:37 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 14:09:37 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 14:09:37 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 14:09:37 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 14:09:38 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 14:09:38 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 14:10:07 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 14:10:07 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process1389528107869555178properties
+TERM trapped.  Shutting down.
+2020.07.16 14:10:10 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 14:10:47 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+TERM trapped.  Forcing immediate shutdown.
+JVM did not exit on request, terminated
+JVM exited on its own while waiting to kill the application.
+JVM exited in response to signal SIGKILL (9).
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 15:19:42 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 15:19:42 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 15:19:42 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 15:19:42 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 15:19:42 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 15:19:42 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 15:19:58 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 15:19:58 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process14426370958487522395properties
+2020.07.16 15:20:26 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 15:20:26 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process5148502416643665378properties
+2020.07.16 15:20:36 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 15:20:36 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 15:26:49 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 15:26:50 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 15:26:51 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 15:26:51 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 15:26:51 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 15:26:51 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 18:02:43 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 18:02:43 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 18:02:43 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 18:02:43 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 18:02:44 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:02:44 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:03:02 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 18:03:02 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process13555787474940344193properties
+2020.07.16 18:03:30 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 18:03:30 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process15087107751607240326properties
+2020.07.16 18:03:41 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 18:03:41 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 18:08:01 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 18:08:03 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 18:08:04 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 18:08:05 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 18:08:05 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 18:08:05 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 18:08:11 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 18:08:11 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 18:08:11 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 18:08:11 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 18:08:12 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:08:12 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:08:31 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 18:08:31 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process3238787252420826087properties
+2020.07.16 18:09:00 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 18:09:00 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process10477071577964770058properties
+2020.07.16 18:09:08 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 18:09:08 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 18:17:23 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 18:17:24 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 18:17:25 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 18:17:26 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 18:17:26 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 18:17:26 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 18:17:30 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 18:17:30 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 18:17:30 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 18:17:31 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 18:17:31 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:17:31 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:17:49 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 18:17:49 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process11729481156939925887properties
+2020.07.16 18:18:19 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 18:18:19 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process16461374003740071966properties
+2020.07.16 18:18:28 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 18:18:28 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 18:35:49 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 18:35:50 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 18:35:51 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 18:35:51 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 18:35:51 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 18:35:51 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 18:35:57 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 18:35:57 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 18:35:57 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 18:35:57 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.07.16 18:35:58 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:35:58 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 18:36:17 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 18:36:17 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process9591601177388639197properties
+2020.07.16 18:36:46 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 18:36:46 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process3321780916114746564properties
+2020.07.16 18:36:57 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 18:36:57 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 18:37:00 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 18:37:01 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 18:37:04 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 18:37:04 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 18:37:04 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 18:37:04 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 18:37:10 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 18:37:10 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 18:37:10 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 18:37:10 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 18:37:11 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:37:11 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:37:31 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 18:37:31 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process5161342736538664783properties
+2020.07.16 18:38:06 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 18:38:06 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process11439295024320089462properties
+2020.07.16 18:38:15 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 18:38:15 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 18:38:33 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 18:38:34 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 18:38:35 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 18:38:36 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 18:38:36 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 18:38:36 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 18:38:41 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 18:38:41 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 18:38:41 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 18:38:41 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 18:38:42 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:38:42 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:39:00 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 18:39:00 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process18085978230041464165properties
+2020.07.16 18:39:28 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 18:39:28 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process5842701598334075698properties
+2020.07.16 18:39:37 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 18:39:37 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 18:45:05 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 18:45:08 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 18:45:12 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 18:45:14 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 18:45:14 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2020.07.16 18:45:14 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 18:45:22 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 18:45:22 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 18:45:22 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 18:45:22 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 18:45:23 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:45:23 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:45:44 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 18:45:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process14802086688862725589properties
+2020.07.16 18:46:10 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 18:46:10 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process1814802272623359511properties
+2020.07.16 18:46:17 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 18:46:17 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:00:54 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:00:54 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 19:00:55 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 19:00:55 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:00:55 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:00:55 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:01:03 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:01:03 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:01:03 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:01:03 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:01:04 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:01:04 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:01:20 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 19:01:20 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process8761142352282037495properties
+2020.07.16 19:01:48 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 19:01:48 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process3718219945041187472properties
+2020.07.16 19:01:57 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 19:01:57 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:02:52 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:02:54 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 19:02:58 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 19:02:58 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:02:58 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:02:58 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:03:05 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:03:05 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:03:06 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:03:06 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:03:07 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:03:07 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:03:26 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 19:03:26 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process7462339837644141530properties
+2020.07.16 19:03:57 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 19:03:57 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process7048679851404897739properties
+2020.07.16 19:04:07 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 19:04:07 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:04:14 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:04:17 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 19:04:20 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 19:04:22 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:04:22 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:04:22 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:04:40 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:04:40 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:04:40 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:04:40 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:04:42 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:04:42 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:05:01 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 19:05:01 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process12797695202374353375properties
+2020.07.16 19:05:26 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 19:05:26 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process9048292008707730214properties
+2020.07.16 19:05:35 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 19:05:35 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:08:04 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:08:06 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 19:08:10 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 19:08:11 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:08:11 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:08:11 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:08:20 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:08:20 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:08:20 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:08:20 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:08:21 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:08:21 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+TERM trapped.  Shutting down.
+2020.07.16 19:08:39 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:08:40 ERROR app[][o.s.a.p.EsManagedProcess] Failed to check status
+java.lang.IllegalStateException: ClusterService was close during health call
+	at org.elasticsearch.action.admin.cluster.health.TransportClusterHealthAction$3.onClusterServiceClose(TransportClusterHealthAction.java:190)
+	at org.elasticsearch.cluster.ClusterStateObserver$ContextPreservingListener.onClusterServiceClose(ClusterStateObserver.java:315)
+	at org.elasticsearch.cluster.ClusterStateObserver$ObserverClusterStateListener.onClose(ClusterStateObserver.java:234)
+	at org.elasticsearch.cluster.service.ClusterApplierService.doStop(ClusterApplierService.java:173)
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.stop(AbstractLifecycleComponent.java:91)
+	at org.elasticsearch.cluster.service.ClusterService.doStop(ClusterService.java:123)
+	at org.elasticsearch.common.component.AbstractLifecycleComponent.stop(AbstractLifecycleComponent.java:91)
+	at org.elasticsearch.node.Node.stop(Node.java:848)
+	at org.elasticsearch.node.Node.close(Node.java:871)
+	at org.elasticsearch.core.internal.io.IOUtils.close(IOUtils.java:104)
+	at org.elasticsearch.core.internal.io.IOUtils.close(IOUtils.java:62)
+	at org.elasticsearch.bootstrap.Bootstrap$4.run(Bootstrap.java:184)
+2020.07.16 19:08:41 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:08:41 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:08:41 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:08:47 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:08:47 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:08:47 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:08:47 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:08:48 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:08:48 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:09:07 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 19:09:07 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process6897306975064795514properties
+2020.07.16 19:09:37 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 19:09:37 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process11176028430412846291properties
+2020.07.16 19:09:46 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 19:09:46 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:15:49 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:15:52 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 19:15:55 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 19:16:00 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:16:00 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:16:00 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:17:00 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:17:00 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:17:00 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:17:00 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:17:00 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:17:00 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:17:19 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 19:17:19 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process14063715428451287998properties
+2020.07.16 19:17:44 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 19:17:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process5252789210422303850properties
+2020.07.16 19:17:53 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 19:17:53 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:19:49 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:19:50 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 19:19:51 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 19:19:52 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:19:52 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:19:52 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:19:58 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:19:58 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:19:59 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:19:59 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.07.16 19:19:59 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:19:59 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:20:18 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 19:20:18 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process10218389235901333946properties
+2020.07.16 19:20:47 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 19:20:47 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process15401662763326882955properties
+2020.07.16 19:20:55 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 19:20:55 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:21:30 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:21:30 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 19:21:32 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 19:21:32 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 19:21:32 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 19:21:32 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 19:21:46 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 19:21:47 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 19:21:47 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 19:21:47 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 19:21:48 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:21:48 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:22:07 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 19:22:07 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process4878185822658796250properties
+2020.07.16 19:22:34 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 19:22:34 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process9913355440514704214properties
+2020.07.16 19:22:43 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 19:22:43 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 19:59:57 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 19:59:59 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:00:02 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:00:02 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:00:02 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:00:02 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:00:13 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:00:13 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:00:14 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:00:14 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:00:15 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:00:15 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+TERM trapped.  Shutting down.
+2020.07.16 20:00:25 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:00:25 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:00:25 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:00:25 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:00:45 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:00:45 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:00:45 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:00:46 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:00:47 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:00:47 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+TERM trapped.  Shutting down.
+2020.07.16 20:00:56 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:00:56 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:00:56 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:00:56 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:01:03 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:01:03 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:01:03 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:01:03 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:01:05 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:01:05 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:01:27 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:01:27 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process376191001667085055properties
+TERM trapped.  Shutting down.
+2020.07.16 20:01:52 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:02:01 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:02:02 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:02:02 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:02:02 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:02:10 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:02:10 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:02:10 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:02:10 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.07.16 20:02:10 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:02:10 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:02:34 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:02:34 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process366978534441465650properties
+TERM trapped.  Shutting down.
+2020.07.16 20:02:58 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:03:07 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:03:07 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:03:07 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:03:07 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:03:15 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:03:15 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:03:15 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:03:15 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:03:16 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:03:16 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:03:36 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:03:36 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process6211466126387854252properties
+TERM trapped.  Shutting down.
+2020.07.16 20:03:49 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:03:51 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:03:52 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:03:52 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:03:52 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:04:02 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:04:02 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:04:02 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:04:02 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:04:03 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:04:03 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:04:24 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:04:24 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process12067657789550738183properties
+TERM trapped.  Shutting down.
+2020.07.16 20:04:34 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:04:36 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:04:38 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:04:38 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:04:38 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:04:46 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:04:46 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:04:47 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:04:47 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:04:48 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:04:48 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:05:11 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:05:11 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process15942725584115182892properties
+TERM trapped.  Shutting down.
+2020.07.16 20:05:16 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:05:21 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:05:22 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:05:22 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:05:22 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:05:36 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:05:36 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:05:36 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:05:36 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:05:37 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:05:37 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:05:59 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:05:59 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process17959090625661546384properties
+2020.07.16 20:06:26 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:06:26 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process4624589780151178706properties
+TERM trapped.  Shutting down.
+2020.07.16 20:06:30 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:06:38 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:06:39 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:06:39 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:06:39 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:06:39 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:06:48 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:06:48 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:06:49 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:06:49 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.07.16 20:06:49 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:06:49 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:07:08 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:07:08 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process5981568432746413367properties
+2020.07.16 20:07:37 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:07:37 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process14658738735099648976properties
+2020.07.16 20:07:50 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 20:07:50 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 20:08:12 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:08:14 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:08:15 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:08:16 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:08:16 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:08:16 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:09:22 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:09:22 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:09:22 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:09:22 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:09:23 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:09:23 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:09:46 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:09:46 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process8026946676456957312properties
+2020.07.16 20:10:15 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:10:15 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process9988469744577305100properties
+2020.07.16 20:10:28 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 20:10:28 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 20:10:53 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:10:54 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:10:58 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:10:59 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:10:59 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:10:59 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:11:09 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:11:09 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:11:09 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:11:10 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:11:10 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:11:10 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:11:33 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:11:33 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process8383410741219480775properties
+2020.07.16 20:12:04 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:12:04 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process9232941840669016509properties
+2020.07.16 20:12:12 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 20:12:12 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 20:12:38 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:12:40 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:12:43 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:12:44 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:12:44 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:12:44 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:12:55 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:12:55 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:12:55 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:12:56 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.07.16 20:12:56 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:12:56 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:13:17 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:13:17 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process6886676958638897941properties
+2020.07.16 20:13:44 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:13:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process9293471377863271398properties
+2020.07.16 20:13:53 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 20:13:53 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 20:18:22 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:18:23 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:18:24 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:18:24 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:18:24 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2020.07.16 20:18:24 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:19:01 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:19:01 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:19:01 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:19:01 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:19:02 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:19:02 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:19:21 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:19:21 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process395853627360366331properties
+2020.07.16 20:19:47 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:19:47 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process6820423763078138004properties
+2020.07.16 20:19:55 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 20:19:55 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 20:22:12 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:22:13 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:22:16 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:22:17 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:22:17 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:22:17 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:22:27 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:22:27 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:22:27 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:22:27 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:22:28 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:22:28 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:22:50 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:22:50 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process6518094527862764118properties
+2020.07.16 20:23:18 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:23:18 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process17207160907659433045properties
+2020.07.16 20:23:27 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 20:23:27 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+TERM trapped.  Shutting down.
+2020.07.16 20:27:39 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.07.16 20:27:40 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.07.16 20:27:43 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.07.16 20:27:44 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.07.16 20:27:44 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.07.16 20:27:44 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Daemon
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.07.16 20:28:08 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp
+2020.07.16 20:28:08 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.07.16 20:28:09 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch]: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/elasticsearch/bin/elasticsearch
+2020.07.16 20:28:09 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.07.16 20:28:09 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:28:09 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:28:26 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.07.16 20:28:26 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process3582658631008299094properties
+2020.07.16 20:28:55 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.07.16 20:28:55 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp/sq-process15743280048665113033properties
+2020.07.16 20:29:06 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.07.16 20:29:06 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up

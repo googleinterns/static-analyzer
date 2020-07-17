@@ -7,11 +7,11 @@ cluster.routing.allocation.awareness.attributes: rack_id
 transport.host: 127.0.0.1
 node.attr.rack_id: sonarqube
 transport.tcp.port: '9001'
-path.logs: /home/aagubuzo/sonarqube-8.3.1.34397/logs
+path.logs: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/logs
 discovery.zen.minimum_master_nodes: '1'
 http.enabled: 'false'
 node.master: 'true'
-path.data: /home/aagubuzo/sonarqube-8.3.1.34397/data/es6
+path.data: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397/data/es6
 network.host: 127.0.0.1
 node.name: sonarqube
 network.tcp.reuse_address: 'true'
