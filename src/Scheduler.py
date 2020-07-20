@@ -21,7 +21,7 @@ class Scheduler:
                 if ext in toolsObj[tool]["fileTypes"]: 
                     tools.remove(tool) 
                     schedule.append(Task(tool,toolsObj[tool]["invokeCommands"])) 
-        print(schedule)
+       
         return schedule
 
 
@@ -38,6 +38,7 @@ class Scheduler:
         
     
 class Task: 
+    status = True 
 
     def __init__(self, toolName, command): 
         self.__toolName = toolName 

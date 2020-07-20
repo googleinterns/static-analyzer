@@ -14,8 +14,9 @@ class Engine:
 
     #tried to avoid linux sepcific commands   
 
-    def __init__(self,schedule):    
-        self.__schedule = schedule 
+    def __init__(self,schedule, intFile):    
+        self.__schedule = schedule  
+        self.__intFile = intFile
 
     #Overall workflow of Enigne 
         #public interfacing function run 
@@ -26,7 +27,15 @@ class Engine:
        #should be in repo right now 
 
         #run static analyzers 
-        return self.__invokeTools(schedule=self.__schedule)
+        status =self.__invokeTools(schedule=self.__schedule) 
+
+        for task in self.__schedule:  
+            if task.status == False: 
+                Utils.printErrorMessage(task.getToolName() + " SCAN FAILED: CHECK ITS LOGS") 
+            else: 
+                Utils.printNotiMessage(task.getToolName() + " SCAN SUCESSFUL") 
+
+        return status 
 
        
        
@@ -37,44 +46,52 @@ class Engine:
         #were tools invoked with no problem 
         sucsess = True
 
-        procs = []    
+        procs = []     
         Utils.printNotiMessage("BOOTING STATIC ANALYZERS...") 
 
         for task in schedule: 
             #make and start new process
             
-            p = multiprocessing.Process(target = self.__invokeTool(task=task))  
+            p = multiprocessing.Process(target = self.__invokeTool, args= (task,))   
+            
             p.start() 
-            procs.append(p) 
+            procs.append(p)  
+        
+        Utils.printNotiMessage("RUNNING ALL STATIC ANALYZERS")
 
     
 
         #wait for all threads to finish   
         for proc in procs: 
             proc.join()  
+ 
+        #check for sucsess and failures 
+        index = 0
+        for proc in procs:   
+            if proc.exitcode != 0: 
+                sucsess = False  
+                schedule[index].status = False
+            index += 1 
 
-        for proc in procs: 
-           if proc.exitcode != 0: 
-                sucsess = False 
-                break 
 
         Utils.printNotiMessage("SCANS DONE") 
         return sucsess
 
     #invokes the tool via provided command (absolute path)
-    def __invokeTool(self, task): 
+    def __invokeTool(self, task):  
         Utils.printNotiMessage("RUNNING " + task.getToolName() + "...") 
-        commands = task.getCommand() 
+        commands = task.getCommand()  
+       
 
         for command in commands: 
             #potential security input check?? 
-            retCode = subprocess.run(command,shell = True).returncode
-            if (retCode != 0): 
-                Utils.printErrorMessage(task.getToolName() +": SCAN FAILED; CHECK ITS LOGS") 
-                self.terminate()
-
+            with open(self.__intFile["tools"][task.getToolName()]["output"], "w") as output:  
+                with open(self.__intFile["tools"][task.getToolName()]["error"], "w") as errOutput:
+                    retCode = subprocess.run(command,shell = True,stdout=output, stderr=errOutput).returncode
+            if (set(self.__intFile["tools"][task.getToolName()]["sucRetCodes"]).__contains__(retCode) == False ): 
+                print(task.getToolName() + " " + str(retCode)) 
+                os._exit(1)
         
-        if(retCode == 0):
-            Utils.printNotiMessage(task.getToolName() + " SCAN SUCESSFUL") 
+       
           
         

@@ -26,9 +26,10 @@ while cycles > 0:
         response = requests.get("http://localhost:9000/api/system/status")  
         if response.status_code == 200:  
             if response.json()["status"] == "UP": 
-                print("im here 2")
                 printNotiMessage("SonarQube UP") 
-                os._exit(0) 
+                os._exit(0)  
+            else: 
+                printNotiMessage("Trying To Connect Agian To SonarQube...")
             
     except requests.exceptions.ConnectionError:  
         printNotiMessage("Trying To Connect Agian To SonarQube...")

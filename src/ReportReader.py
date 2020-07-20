@@ -1,6 +1,7 @@
 import json 
 import requests  
-import Utils 
+import Utils  
+import subprocess
 from Scheduler import Task
 class ReportReader:  
 
@@ -39,7 +40,7 @@ class ReportReader:
         for request in requests:  
            
             if (request.method == "FILE"): 
-                print("run file commands") 
+                reports.append(Report(request.toolName, self.__getLocalFile(request.requestCommands))) 
             elif(request.method == "API"):  
                 #returns strign from file
                  reports.append(Report(request.toolName,self.__getApiFile(request.requestCommands)))    
@@ -82,8 +83,9 @@ class ReportReader:
         tools = self.__intFile["tools"] 
         #for the tools in each task in the schedule, get request methods/info
         for task in self.__schedule: 
-            tool = tools[task.getToolName()]   
-            requests.append(Request(toolName = tool["toolName"],method = tool["method"], requestCommands = tool["requestCommands"])) 
+            if task.status == True: 
+                tool = tools[task.getToolName()]   
+                requests.append(Request(toolName = tool["toolName"],method = tool["method"], requestCommands = tool["requestCommands"])) 
         
         return requests  
 
@@ -106,11 +108,19 @@ class ReportReader:
 
     
 
-    def __getLocalFile(self): 
-        return "NTI" 
+     
 
-    def __getStdOutFile(self): 
-        return "NTI" 
+    def __getLocalFile(self, requestCommands): 
+        length = len(requestCommands)
+        curr = 0
+        for command in requestCommands:  
+            curr +=1  
+            if(curr == length):  
+                with open(command) as output:
+                    return output.read() 
+            else: 
+                subprocess.run(command, shell=True)  
+        subprocess.run(command,shell = True,stdout=output).returncode 
     
     def __getApiFile(self,requestCommands):  
         #method objects contain strings that help get files 

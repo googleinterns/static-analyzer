@@ -1,0 +1,607 @@
+2020.07.16 13:30:06 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 13:30:06 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 13:30:07 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 13:30:07 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 13:30:07 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 13:30:07 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 13:30:09 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 13:30:09 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 13:30:10 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 13:30:15 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 13:30:15 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 13:30:18 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 13:30:18 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 13:31:20 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 13:31:20 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 13:31:20 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 13:31:22 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 13:32:30 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 13:32:30 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 13:32:31 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 13:32:31 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 13:32:31 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 13:32:31 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 13:32:33 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 13:32:33 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 13:32:33 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 13:32:36 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 13:32:36 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 13:32:39 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 13:32:39 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 13:44:56 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 13:44:56 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 13:44:56 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 13:44:57 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 13:46:11 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 13:46:11 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 13:46:12 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 13:46:12 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 13:46:12 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 13:46:12 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 13:46:14 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 13:46:14 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 13:46:15 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 13:46:17 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 13:46:17 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 13:46:19 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 13:46:19 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 14:09:23 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 14:09:23 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 14:09:23 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 14:09:25 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 15:20:27 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 15:20:27 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 15:20:29 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 15:20:29 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 15:20:29 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 15:20:29 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 15:20:31 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 15:20:31 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 15:20:32 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 15:20:33 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 15:20:34 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 15:20:35 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 15:20:35 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 15:26:49 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 15:26:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 15:26:49 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 15:26:50 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 18:03:31 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 18:03:31 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 18:03:33 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:03:33 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 18:03:33 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 18:03:33 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:03:35 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 18:03:35 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 18:03:35 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 18:03:37 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 18:03:37 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 18:03:40 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 18:03:40 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 18:08:02 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 18:08:02 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 18:08:02 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 18:08:03 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 18:09:01 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 18:09:01 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 18:09:02 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:09:02 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 18:09:02 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 18:09:02 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:09:04 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 18:09:04 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 18:09:04 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 18:09:06 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 18:09:06 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 18:09:08 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 18:09:08 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 18:17:23 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 18:17:23 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 18:17:23 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 18:17:24 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 18:18:20 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 18:18:20 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 18:18:21 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:18:21 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 18:18:21 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 18:18:21 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:18:23 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 18:18:23 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 18:18:23 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 18:18:26 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 18:18:26 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 18:18:27 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 18:18:28 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 18:35:49 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 18:35:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 18:35:49 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 18:35:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 18:36:47 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 18:36:48 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 18:36:49 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:36:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 18:36:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 18:36:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:36:52 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 18:36:52 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 18:36:52 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 18:36:55 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 18:36:55 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 18:36:56 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 18:36:57 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 18:37:01 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 18:37:01 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 18:37:01 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 18:37:01 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 18:38:07 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 18:38:07 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 18:38:08 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:38:08 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 18:38:08 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 18:38:08 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:38:10 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 18:38:10 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 18:38:11 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 18:38:13 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 18:38:13 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 18:38:15 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 18:38:15 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 18:38:33 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 18:38:33 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 18:38:33 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 18:38:34 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 18:39:29 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 18:39:29 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 18:39:30 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:39:30 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 18:39:30 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 18:39:30 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:39:33 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 18:39:33 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 18:39:33 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 18:39:35 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 18:39:35 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 18:39:37 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 18:39:37 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 18:45:06 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 18:45:06 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 18:45:06 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 18:45:08 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 18:46:10 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 18:46:10 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 18:46:11 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 18:46:11 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 18:46:11 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 18:46:11 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 18:46:13 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 18:46:13 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 18:46:13 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 18:46:15 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 18:46:15 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 18:46:17 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 18:46:17 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:00:54 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:00:54 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:00:54 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:00:54 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 19:01:49 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 19:01:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 19:01:50 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:01:50 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 19:01:50 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 19:01:50 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:01:52 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 19:01:52 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 19:01:52 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 19:01:54 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 19:01:54 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 19:01:56 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 19:01:56 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:02:52 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:02:52 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:02:52 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:02:54 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 19:03:58 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 19:03:58 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 19:03:59 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:03:59 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 19:03:59 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 19:03:59 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:04:02 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 19:04:02 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 19:04:02 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 19:04:05 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 19:04:05 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 19:04:07 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 19:04:07 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:04:14 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:04:14 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:04:14 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:04:17 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 19:05:26 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 19:05:26 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 19:05:28 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:05:28 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 19:05:28 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 19:05:28 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:05:30 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 19:05:30 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 19:05:30 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 19:05:32 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 19:05:32 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 19:05:35 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 19:05:35 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:08:05 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:08:05 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:08:05 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:08:06 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 19:09:38 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 19:09:38 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 19:09:39 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:09:39 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 19:09:39 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 19:09:39 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:09:41 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 19:09:41 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 19:09:42 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 19:09:44 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 19:09:44 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 19:09:46 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 19:09:46 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:15:32 INFO  ce[][o.s.c.t.CeWorkerImpl] Execute task | project=test1 | type=REPORT | id=AXNZ6Vn8NLAMID-Hmb7Q
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Extract report | status=SUCCESS | time=0ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist scanner context | status=SUCCESS | time=0ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Propagate analysis warnings from scanner report | status=SUCCESS | time=0ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Execute DB migrations for current project | status=SUCCESS | time=6ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Generate analysis UUID | status=SUCCESS | time=0ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Load analysis metadata | status=SUCCESS | time=98ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Initialize | status=SUCCESS | time=0ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Verify billing | status=SUCCESS | time=0ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Build tree of components | components=2 | status=SUCCESS | time=0ms
+2020.07.16 19:15:33 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Validate project | status=SUCCESS | time=0ms
+2020.07.16 19:15:35 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Load quality profiles | status=SUCCESS | time=2064ms
+2020.07.16 19:15:35 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Load Quality gate | status=SUCCESS | time=15ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Load new code period | status=SUCCESS | time=36ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Detect file moves | reportFiles=1 | dbFiles=1 | addedFiles=0 | status=SUCCESS | time=8ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Load duplications | duplications=0 | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute cross project duplications | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute size measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute new coverage | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute coverage measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute comment measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Copy custom measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute duplication measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute size measures on new code | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute language distribution | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute test measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute complexity measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Load measure computers | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute Quality Profile status | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Execute component visitors | status=SUCCESS | time=82ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Checks executed after computation of measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute Quality Gate measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Compute Quality profile measures | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Generate Quality profile events | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Generate Quality gate events | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist components | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist analysis | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist analysis properties | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist measures | inserts=45 | status=SUCCESS | time=35ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist live measures | insertsOrUpdates=99 | status=SUCCESS | time=235ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist duplication data | insertsOrUpdates=0 | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist new ad hoc Rules | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist issues | cacheSize=0 bytes | inserts=0 | updates=0 | merged=0 | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist project links | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist events | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist sources | status=SUCCESS | time=35ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Persist cross project duplications | status=SUCCESS | time=0ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Enable analysis | status=SUCCESS | time=6ms
+2020.07.16 19:15:36 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Update last usage date of quality profiles | status=SUCCESS | time=5ms
+2020.07.16 19:15:37 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Purge db | status=SUCCESS | time=415ms
+2020.07.16 19:15:38 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Index analysis | status=SUCCESS | time=1258ms
+2020.07.16 19:15:38 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Send issue notifications | newIssuesNotifs=0 | newIssuesDeliveries=0 | myNewIssuesNotifs=0 | myNewIssuesDeliveries=0 | changesNotifs=0 | changesDeliveries=0 | status=SUCCESS | time=0ms
+2020.07.16 19:15:38 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Publish task results | status=SUCCESS | time=0ms
+2020.07.16 19:15:38 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.s.ComputationStepExecutor] Trigger refresh of Portfolios and Applications | status=SUCCESS | time=0ms
+2020.07.16 19:15:38 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.p.a.p.PostProjectAnalysisTasksExecutor] Webhooks | globalWebhooks=0 | projectWebhooks=0 | status=SUCCESS | time=0ms
+2020.07.16 19:15:38 INFO  ce[AXNZ6Vn8NLAMID-Hmb7Q][o.s.c.t.CeWorkerImpl] Executed task | project=test1 | type=REPORT | id=AXNZ6Vn8NLAMID-Hmb7Q | status=SUCCESS | time=5807ms
+2020.07.16 19:15:49 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:15:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:15:49 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:15:52 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 19:17:45 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 19:17:45 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 19:17:46 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:17:46 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 19:17:46 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 19:17:46 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:17:48 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 19:17:48 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 19:17:49 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 19:17:51 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 19:17:51 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 19:17:52 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 19:17:53 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:19:49 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:19:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:19:49 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:19:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 19:20:48 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 19:20:48 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 19:20:49 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:20:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 19:20:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 19:20:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:20:51 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 19:20:51 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 19:20:51 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 19:20:53 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 19:20:53 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 19:20:55 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 19:20:55 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:21:30 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:21:30 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:21:30 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:21:30 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 19:22:34 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 19:22:34 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 19:22:35 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 19:22:35 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 19:22:35 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 19:22:35 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 19:22:38 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 19:22:38 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 19:22:38 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 19:22:40 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 19:22:40 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 19:22:42 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 19:22:42 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 19:59:58 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 19:59:58 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 19:59:58 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 19:59:59 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:06:27 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:06:27 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:06:28 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:06:28 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:06:28 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:06:28 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:06:30 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 20:06:31 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:06:31 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:06:31 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:06:34 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:06:34 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:06:35 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:06:36 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:06:36 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 20:06:36 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 20:06:36 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Hard stopping workers...
+2020.07.16 20:06:38 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:07:37 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:07:37 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:07:38 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:07:38 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:07:38 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:07:38 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:07:42 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:07:42 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:07:43 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:07:47 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:07:47 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:07:49 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:07:50 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:08:12 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 20:08:12 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 20:08:12 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 20:08:14 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:10:17 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:10:17 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:10:19 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:10:19 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:10:19 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:10:19 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:10:22 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:10:22 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:10:22 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:10:26 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:10:26 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:10:28 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:10:28 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:10:53 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 20:10:53 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 20:10:53 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 20:10:54 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:12:04 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:12:04 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:12:05 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:12:05 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:12:05 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:12:05 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:12:07 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:12:07 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:12:08 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:12:09 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:12:09 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:12:11 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:12:11 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:12:38 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 20:12:38 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 20:12:38 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 20:12:39 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:13:45 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:13:45 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:13:46 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:13:46 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:13:46 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:13:46 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:13:48 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:13:48 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:13:48 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:13:50 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:13:51 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:13:52 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:13:52 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:18:22 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 20:18:22 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 20:18:22 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 20:18:23 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:19:48 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:19:48 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:19:49 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:19:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:19:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:19:49 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:19:51 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:19:51 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:19:51 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:19:53 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:19:53 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:19:55 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:19:55 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:22:12 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 20:22:12 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 20:22:12 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 20:22:13 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:23:19 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:23:19 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:23:20 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:23:20 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:23:20 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:23:20 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:23:22 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:23:22 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:23:22 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:23:24 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:23:24 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:23:26 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:23:26 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:27:40 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.07.16 20:27:40 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.07.16 20:27:40 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.07.16 20:27:40 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.07.16 20:28:56 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.07.16 20:28:56 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.07.16 20:28:57 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.07.16 20:28:57 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.07.16 20:28:57 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.07.16 20:28:57 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.07.16 20:28:59 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.07.16 20:28:59 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.07.16 20:28:59 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.07.16 20:29:02 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/aagubuzo/staticAnaProj/static-analyzers/sonarQube/sonarqube-8.3.1.34397
+2020.07.16 20:29:03 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.07.16 20:29:06 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.07.16 20:29:06 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.07.16 20:29:18 INFO  ce[][o.s.c.t.CeWorkerImpl] Execute task | project=test1 | type=REPORT | id=AXNaLN518_BimqZm3vAS
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Extract report | status=SUCCESS | time=46ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist scanner context | status=SUCCESS | time=16ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Propagate analysis warnings from scanner report | status=SUCCESS | time=62ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Execute DB migrations for current project | status=SUCCESS | time=13ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Generate analysis UUID | status=SUCCESS | time=0ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Load analysis metadata | status=SUCCESS | time=146ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Initialize | status=SUCCESS | time=0ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Verify billing | status=SUCCESS | time=0ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Build tree of components | components=2 | status=SUCCESS | time=71ms
+2020.07.16 20:29:19 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Validate project | status=SUCCESS | time=11ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Load quality profiles | status=SUCCESS | time=1653ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Load Quality gate | status=SUCCESS | time=22ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Load new code period | status=SUCCESS | time=20ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Detect file moves | reportFiles=1 | dbFiles=1 | addedFiles=0 | status=SUCCESS | time=16ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Load duplications | duplications=0 | status=SUCCESS | time=4ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute cross project duplications | status=SUCCESS | time=0ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute size measures | status=SUCCESS | time=18ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute new coverage | status=SUCCESS | time=54ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute coverage measures | status=SUCCESS | time=3ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute comment measures | status=SUCCESS | time=1ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Copy custom measures | status=SUCCESS | time=6ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute duplication measures | status=SUCCESS | time=1ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute size measures on new code | status=SUCCESS | time=2ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute language distribution | status=SUCCESS | time=17ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute test measures | status=SUCCESS | time=2ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute complexity measures | status=SUCCESS | time=4ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Load measure computers | status=SUCCESS | time=3ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute Quality Profile status | status=SUCCESS | time=70ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Execute component visitors | status=SUCCESS | time=87ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Checks executed after computation of measures | status=SUCCESS | time=1ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute Quality Gate measures | status=SUCCESS | time=16ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Compute Quality profile measures | status=SUCCESS | time=5ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Generate Quality profile events | status=SUCCESS | time=7ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Generate Quality gate events | status=SUCCESS | time=9ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist components | status=SUCCESS | time=27ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist analysis | status=SUCCESS | time=14ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist analysis properties | status=SUCCESS | time=2ms
+2020.07.16 20:29:21 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist measures | inserts=45 | status=SUCCESS | time=36ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist live measures | insertsOrUpdates=99 | status=SUCCESS | time=220ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist duplication data | insertsOrUpdates=0 | status=SUCCESS | time=2ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist new ad hoc Rules | status=SUCCESS | time=1ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist issues | cacheSize=0 bytes | inserts=0 | updates=0 | merged=0 | status=SUCCESS | time=3ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist project links | status=SUCCESS | time=12ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist events | status=SUCCESS | time=21ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist sources | status=SUCCESS | time=89ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Persist cross project duplications | status=SUCCESS | time=0ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Enable analysis | status=SUCCESS | time=10ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Update last usage date of quality profiles | status=SUCCESS | time=11ms
+2020.07.16 20:29:22 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Purge db | status=SUCCESS | time=274ms
+2020.07.16 20:29:24 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Index analysis | status=SUCCESS | time=1823ms
+2020.07.16 20:29:24 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Send issue notifications | newIssuesNotifs=0 | newIssuesDeliveries=0 | myNewIssuesNotifs=0 | myNewIssuesDeliveries=0 | changesNotifs=0 | changesDeliveries=0 | status=SUCCESS | time=8ms
+2020.07.16 20:29:24 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Publish task results | status=SUCCESS | time=0ms
+2020.07.16 20:29:24 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.s.ComputationStepExecutor] Trigger refresh of Portfolios and Applications | status=SUCCESS | time=0ms
+2020.07.16 20:29:24 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.p.a.p.PostProjectAnalysisTasksExecutor] Webhooks | globalWebhooks=0 | projectWebhooks=0 | status=SUCCESS | time=54ms
+2020.07.16 20:29:24 INFO  ce[AXNaLN518_BimqZm3vAS][o.s.c.t.CeWorkerImpl] Executed task | project=test1 | type=REPORT | id=AXNaLN518_BimqZm3vAS | status=SUCCESS | time=5882ms
+2020.07.16 20:37:07 INFO  ce[][o.s.c.t.CeWorkerImpl] Execute task | project=test1 | type=REPORT | id=AXNaNAVP8_BimqZm3vAT
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Extract report | status=SUCCESS | time=13ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist scanner context | status=SUCCESS | time=8ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Propagate analysis warnings from scanner report | status=SUCCESS | time=3ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Execute DB migrations for current project | status=SUCCESS | time=4ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Generate analysis UUID | status=SUCCESS | time=0ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Load analysis metadata | status=SUCCESS | time=12ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Initialize | status=SUCCESS | time=0ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Verify billing | status=SUCCESS | time=0ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Build tree of components | components=2 | status=SUCCESS | time=6ms
+2020.07.16 20:37:07 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Validate project | status=SUCCESS | time=4ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Load quality profiles | status=SUCCESS | time=1052ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Load Quality gate | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Load new code period | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Detect file moves | reportFiles=1 | dbFiles=1 | addedFiles=0 | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Load duplications | duplications=0 | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute cross project duplications | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute size measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute new coverage | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute coverage measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:08 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute comment measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Copy custom measures | status=SUCCESS | time=143ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute duplication measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute size measures on new code | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute language distribution | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute test measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute complexity measures | status=SUCCESS | time=1ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Load measure computers | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute Quality Profile status | status=SUCCESS | time=5ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Execute component visitors | status=SUCCESS | time=12ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Checks executed after computation of measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute Quality Gate measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Compute Quality profile measures | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Generate Quality profile events | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Generate Quality gate events | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist components | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist analysis | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist analysis properties | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist measures | inserts=45 | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist live measures | insertsOrUpdates=99 | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist duplication data | insertsOrUpdates=0 | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist new ad hoc Rules | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist issues | cacheSize=0 bytes | inserts=0 | updates=0 | merged=0 | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist project links | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist events | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist sources | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Persist cross project duplications | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Enable analysis | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Update last usage date of quality profiles | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Purge db | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Index analysis | status=SUCCESS | time=297ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Send issue notifications | newIssuesNotifs=0 | newIssuesDeliveries=0 | myNewIssuesNotifs=0 | myNewIssuesDeliveries=0 | changesNotifs=0 | changesDeliveries=0 | status=SUCCESS | time=3ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Publish task results | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.s.ComputationStepExecutor] Trigger refresh of Portfolios and Applications | status=SUCCESS | time=0ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.p.a.p.PostProjectAnalysisTasksExecutor] Webhooks | globalWebhooks=0 | projectWebhooks=0 | status=SUCCESS | time=3ms
+2020.07.16 20:37:09 INFO  ce[AXNaNAVP8_BimqZm3vAT][o.s.c.t.CeWorkerImpl] Executed task | project=test1 | type=REPORT | id=AXNaNAVP8_BimqZm3vAT | status=SUCCESS | time=1682ms

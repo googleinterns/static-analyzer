@@ -25,7 +25,7 @@ def start():
     #process arguments returns 
      
 
-    #open internal file and turn it ot json object 
+    #open internal file and turn it to json object 
     with open("../data/internalFile.json","r") as fp:  
             intFile = json.load(fp)    
 
@@ -37,10 +37,9 @@ def start():
     schedule = scheduler.makeSchedule()   
      
     #runs engine  
-    engine = Engine(schedule) 
+    engine = Engine(schedule=schedule, intFile= intFile)  
     scanSucsess = engine.run()   
 
-    print(scanSucsess)
     if scanSucsess == False:
         Utils.printNotiMessage("All Scans Weren't Sucsessful")
 
