@@ -11,8 +11,9 @@ from ReportReader import ReportReader
 #ToDO 
     #file directory organization (static analyzer scanners in a folder)
     #-l listing option 
-#makes the temp directory by either copying selected files or copying whole repo  
-# 
+    #makes the temp directory by either copying selected files or copying whole repo  
+    # I was flirting around with making some paths relative to temp and others not, but some have to be realitve to temp 
+    #due to not being abel to programmtically append the path of root folder so I should make all realtive ot temp  (or bin dependig)
 
 
 
@@ -29,7 +30,7 @@ def start():
     with open("../data/internalFile.json","r") as fp:  
             intFile = json.load(fp)    
 
-    os.chdir("../mem/temp")
+    os.chdir(Utils.getProjRoot() + "mem/temp")
 
 
     #make schedule  
@@ -40,8 +41,7 @@ def start():
     engine = Engine(schedule=schedule, intFile= intFile)  
     scanSucsess = engine.run()   
 
-    if scanSucsess == False:
-        Utils.printNotiMessage("All Scans Weren't Sucsessful")
+    
 
     #generate report 
     reportReader = ReportReader(schedule=schedule,intFile=intFile)
@@ -51,8 +51,8 @@ def start():
 
 
     #delete repo when processes and scans are done 
-    os.chdir(os.path.dirname(os.getcwd()))  
-    shutil.rmtree("temp")
+    os.chdir(Utils.getProjRoot() + "bin")  
+    shutil.rmtree(Utils.getProjRoot() + "mem/temp")
 
 
     return "NTI"
@@ -110,7 +110,7 @@ def processArgs():
 def repoOptionFunc(location):  
     #cloning repo provided by location    
     try: 
-        shutil.copytree(location[0], "../mem/temp")  
+        shutil.copytree(location[0], Utils.getProjRoot() + "mem/temp")  
     except FileExistsError as excp:
         Utils.quitInError("TEMP ALREADY EXISTES PLEASE RENAME OR DELETE") 
     except FileNotFoundError as excp: 

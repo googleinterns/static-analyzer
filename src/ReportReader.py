@@ -79,13 +79,12 @@ class ReportReader:
         # based on internal file  
         # adds request objects into list  
 
-        #get tools array
-        tools = self.__intFile["tools"] 
+       
+       
         #for the tools in each task in the schedule, get request methods/info
         for task in self.__schedule: 
-            if task.status == True: 
-                tool = tools[task.getToolName()]   
-                requests.append(Request(toolName = tool["toolName"],method = tool["method"], requestCommands = tool["requestCommands"])) 
+            if task.status == True:    
+                requests.append(Request(toolName = task.toolName,method = task.method, requestCommands = task.requestCommands)) 
         
         return requests  
 

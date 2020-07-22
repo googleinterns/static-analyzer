@@ -20,7 +20,13 @@ class Scheduler:
             for tool in tools:  
                 if ext in toolsObj[tool]["fileTypes"]: 
                     tools.remove(tool) 
-                    schedule.append(Task(tool,toolsObj[tool]["invokeCommands"])) 
+                    schedule.append(Task(tool,toolsObj[tool]["invokeCommands"], 
+                        toolsObj[tool]["method"], 
+                        toolsObj[tool]["requestCommands"], 
+                        toolsObj[tool]["sucRetCodes"], 
+                        toolsObj[tool]["output"], 
+                        toolsObj[tool]["error"], 
+                        toolsObj[tool]["mapping"])) 
        
         return schedule
 
@@ -40,15 +46,20 @@ class Scheduler:
 class Task: 
     status = True 
 
-    def __init__(self, toolName, command): 
-        self.__toolName = toolName 
-        self.__command = command 
+    def __init__(self, toolName, command, method, 
+    requestCommands, sucRetCodes, output, error, mapping ): 
+        self.toolName = toolName 
+        self.command = command   
+        self.method = method 
+        self.requestCommands = requestCommands 
+        self.sucRetCodes = sucRetCodes  
+        self.output = output
+        self.error = error   
+        self.mapping = mapping
 
-    def getToolName(self): 
-        return self.__toolName 
 
-    def getCommand(self): 
-        return self.__command 
+
+
     
      
     

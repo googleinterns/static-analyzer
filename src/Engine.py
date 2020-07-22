@@ -9,7 +9,8 @@ import sys
 
 class Engine:  
     #TO-DO: 
-        #implementing multi cmd calls (sonarQube server -> scanner) 
+        #implementing multi cmd calls (sonarQube server -> scanner)  
+        #instead   of paassing inn int ffiel I can puuuut ouutput and eerr files in tasll
 
 
     #tried to avoid linux sepcific commands   
@@ -26,16 +27,24 @@ class Engine:
 
        #should be in repo right now 
 
-        #run static analyzers 
-        status =self.__invokeTools(schedule=self.__schedule) 
+        #run static analyzers  
+        if(len(self.__schedule) > 0):
+            status =self.__invokeTools(schedule=self.__schedule) 
+        else: 
+            Utils.printNotiMessage("NO SCANS MADE; IS THERE SRC CODE???")   
+            return 
 
         for task in self.__schedule:  
             if task.status == False: 
-                Utils.printErrorMessage(task.getToolName() + " SCAN FAILED: CHECK ITS LOGS") 
+                Utils.printErrorMessage(task.toolName + " SCAN FAILED: CHECK ITS LOGS") 
             else: 
-                Utils.printNotiMessage(task.getToolName() + " SCAN SUCESSFUL") 
+                Utils.printNotiMessage(task.toolName + " SCAN SUCESSFUL") 
 
-        return status 
+        if status == False:
+             Utils.printNotiMessage("ALL SCANS WERE NOT SUCSESSFUL") 
+        else: 
+            Utils.printNotiMessage("ALL SCANS WERE SUCSESSFUL") 
+
 
        
        
@@ -55,9 +64,10 @@ class Engine:
             p = multiprocessing.Process(target = self.__invokeTool, args= (task,))   
             
             p.start() 
+            Utils.printNotiMessage("RUNNING " + task.toolName + "...") 
             procs.append(p)  
         
-        Utils.printNotiMessage("RUNNING ALL STATIC ANALYZERS")
+       
 
     
 
@@ -79,17 +89,16 @@ class Engine:
 
     #invokes the tool via provided command (absolute path)
     def __invokeTool(self, task):  
-        Utils.printNotiMessage("RUNNING " + task.getToolName() + "...") 
-        commands = task.getCommand()  
+        commands = task.command  
        
 
         for command in commands: 
             #potential security input check?? 
-            with open(self.__intFile["tools"][task.getToolName()]["output"], "w") as output:  
-                with open(self.__intFile["tools"][task.getToolName()]["error"], "w") as errOutput:
+            with open(Utils.getProjRoot() + task.output, "w") as output:  
+                with open(Utils.getProjRoot() + task.error, "w") as errOutput:
                     retCode = subprocess.run(command,shell = True,stdout=output, stderr=errOutput).returncode
-            if (set(self.__intFile["tools"][task.getToolName()]["sucRetCodes"]).__contains__(retCode) == False ): 
-                print(task.getToolName() + " " + str(retCode)) 
+            if (set(task.sucRetCodes).__contains__(retCode) == False ): 
+                #print(task.toolName + " " + str(retCode)) 
                 os._exit(1)
         
        

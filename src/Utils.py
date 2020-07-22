@@ -2,7 +2,8 @@ import sys
 import os 
 import shutil 
 import requests 
-import time
+import time 
+from pathlib import Path 
 #need an error exit protocal (deleets temp)
 def printErrorMessage(message): 
    
@@ -23,7 +24,11 @@ def quitInError(message):
     if os.getcwd().split("/")[-1] == "temp": 
          os.chdir(os.path.dirname(os.getcwd())) 
          shutil.rmtree("temp") 
-    os._exit(1)
+    os._exit(1) 
+
+def getProjRoot():  
+    return str(Path.home()) + "/staticAnaProj/" 
+
     
 def waitForServer(url,waitTime):  
     cycles = int(waitTime)/5 
