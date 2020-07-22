@@ -45,7 +45,7 @@ class TestScheduler(unittest.TestCase):
         expected = set({"Pylint","SonarQube"})
 
        
-        #assert 
+        #asser 
         assert expected == result 
 
     
