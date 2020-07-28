@@ -1,0 +1,201 @@
+{ "vulList": [
+    {
+        "message": "Trailing whitespace", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 1, 
+        "message-id": "C0303", 
+        "type": "convention", 
+        "symbol": "trailing-whitespace", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Trailing whitespace", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 5, 
+        "message-id": "C0303", 
+        "type": "convention", 
+        "symbol": "trailing-whitespace", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Unnecessary parens after 'print' keyword", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 5, 
+        "message-id": "C0325", 
+        "type": "convention", 
+        "symbol": "superfluous-parens", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Trailing whitespace", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 9, 
+        "message-id": "C0303", 
+        "type": "convention", 
+        "symbol": "trailing-whitespace", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Unnecessary parens after 'print' keyword", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 9, 
+        "message-id": "C0325", 
+        "type": "convention", 
+        "symbol": "superfluous-parens", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Trailing whitespace", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 12, 
+        "message-id": "C0303", 
+        "type": "convention", 
+        "symbol": "trailing-whitespace", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Unnecessary parens after 'if' keyword", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 12, 
+        "message-id": "C0325", 
+        "type": "convention", 
+        "symbol": "superfluous-parens", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Trailing whitespace", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 13, 
+        "message-id": "C0303", 
+        "type": "convention", 
+        "symbol": "trailing-whitespace", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Unnecessary parens after 'print' keyword", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 13, 
+        "message-id": "C0325", 
+        "type": "convention", 
+        "symbol": "superfluous-parens", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Trailing whitespace", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 15, 
+        "message-id": "C0303", 
+        "type": "convention", 
+        "symbol": "trailing-whitespace", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Missing module docstring", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 1, 
+        "message-id": "C0111", 
+        "type": "convention", 
+        "symbol": "missing-docstring", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Constant name \"blagUjdnk989\" doesn't conform to UPPER_CASE naming style", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testp.py", 
+        "line": 15, 
+        "message-id": "C0103", 
+        "type": "convention", 
+        "symbol": "invalid-name", 
+        "module": "temp.testp"
+    }, 
+    {
+        "message": "Trailing whitespace", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testfold/foldtest.py", 
+        "line": 1, 
+        "message-id": "C0303", 
+        "type": "convention", 
+        "symbol": "trailing-whitespace", 
+        "module": "temp.testfold.foldtest"
+    }, 
+    {
+        "message": "Unnecessary parens after 'print' keyword", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testfold/foldtest.py", 
+        "line": 1, 
+        "message-id": "C0325", 
+        "type": "convention", 
+        "symbol": "superfluous-parens", 
+        "module": "temp.testfold.foldtest"
+    }, 
+    {
+        "message": "Final newline missing", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testfold/foldtest.py", 
+        "line": 2, 
+        "message-id": "C0304", 
+        "type": "convention", 
+        "symbol": "missing-final-newline", 
+        "module": "temp.testfold.foldtest"
+    }, 
+    {
+        "message": "Exactly one space required after assignment\nhgjahsjhcdyuHFJHGHJ6279379 =8\n                           ^", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testfold/foldtest.py", 
+        "line": 2, 
+        "message-id": "C0326", 
+        "type": "convention", 
+        "symbol": "bad-whitespace", 
+        "module": "temp.testfold.foldtest"
+    }, 
+    {
+        "message": "Missing module docstring", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testfold/foldtest.py", 
+        "line": 1, 
+        "message-id": "C0111", 
+        "type": "convention", 
+        "symbol": "missing-docstring", 
+        "module": "temp.testfold.foldtest"
+    }, 
+    {
+        "message": "Constant name \"hgjahsjhcdyuHFJHGHJ6279379\" doesn't conform to UPPER_CASE naming style", 
+        "obj": "", 
+        "column": 0, 
+        "path": "testfold/foldtest.py", 
+        "line": 2, 
+        "message-id": "C0103", 
+        "type": "convention", 
+        "symbol": "invalid-name", 
+        "module": "temp.testfold.foldtest"
+    }
+]
+ }

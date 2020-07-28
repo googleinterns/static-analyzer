@@ -1,17 +1,13 @@
+import os 
+import sys
+
 #from Engine import Engine  
 #from Scheduler import Task   
 #from ReportReader import ReportReader 
 #from Scheduler import Scheduler  
-#import Parser  
-import os 
-import sys 
+#import Parser 
+  
 
-
-ROOT_DIR = os.path.dirname(os.path.abspath("../readme.txt")) + "/src" 
-print(ROOT_DIR) 
-sys.path.append(ROOT_DIR) 
-
-from Engine import Engine
 #less priority task 
     #secuirty on engine calls 
     #delete scannerwork folder and make sure everything good 

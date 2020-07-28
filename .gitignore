@@ -4,4 +4,5 @@
 /static-analyzers/sonarQube/sonarqube-8.3.1.34397/data 
 /static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp 
 /src/__pycache__  
-static-analyzers/sonarQube/sonarqube-8.3.1.34397/bin/linux-x86-64/SonarQube.pid
+static-analyzers/sonarQube/sonarqube-8.3.1.34397/bin/linux-x86-64/SonarQube.pid 
+/.vscode
