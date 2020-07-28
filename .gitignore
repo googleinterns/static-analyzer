@@ -1,5 +1,5 @@
 *.logs
-/mem/analyzerOutput
+/data/analyzerOutput
 /static-analyzers/sonarQube/sonarqube-8.3.1.34397/logs 
 /static-analyzers/sonarQube/sonarqube-8.3.1.34397/data 
 /static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp 
