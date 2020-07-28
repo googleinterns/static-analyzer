@@ -3,21 +3,26 @@ import Utils
 import os  
 import json  
 import sys 
-import re
+import re 
+import yaml
 from Scheduler import Scheduler  
 from Engine import Engine 
-from ReportReader import ReportReader
+from ReportReader import ReportReader 
 
-#ToDO 
-    #file directory organization (static analyzer scanners in a folder)
-    #-l listing option 
-    #makes the temp directory by either copying selected files or copying whole repo  
-    # I was flirting around with making some paths relative to temp and others not, but some have to be realitve to temp 
-    #due to not being abel to programmtically append the path of root folder so I should make all realtive ot temp  (or bin dependig)
+#The parser file is the overall wrapper for the static analyzder tool. 
+#all of the classes that the progran uses is intialzied and ran in this file and this 
+#is the starting point of the program is located.  
 
 
+#ToDo later
+#use argparse library 
+#switch task varibles to private/use getters
+   
+    
 
-#kicks off the whole program
+#This function is the startign point of the entire program  
+#The workflow: parse input & initalize -> make schedule -> execute task 
+#-> generate general report
 def start():   
     #process arugments 
     processArgs()  
@@ -27,10 +32,10 @@ def start():
      
 
     #open internal file and turn it to json object 
-    with open("../data/internalFile.json","r") as fp:  
+    with open(Utils.getProjRoot() + "/data/internalFile.json","r") as fp:  
             intFile = json.load(fp)    
 
-    os.chdir(Utils.getProjRoot() + "mem/temp")
+    os.chdir(Utils.getProjRoot() + "data/temp")
 
 
     #make schedule  
@@ -38,8 +43,8 @@ def start():
     schedule = scheduler.makeSchedule()   
      
     #runs engine  
-    engine = Engine(schedule=schedule, intFile= intFile)  
-    scanSucsess = engine.run()   
+    engine = Engine(schedule=schedule)  
+    scanSuccess = engine.run()   
 
     
 
@@ -52,13 +57,16 @@ def start():
 
     #delete repo when processes and scans are done 
     os.chdir(Utils.getProjRoot() + "bin")  
-    shutil.rmtree(Utils.getProjRoot() + "mem/temp")
+    shutil.rmtree(Utils.getProjRoot() + "data/temp")
 
 
     return "NTI"
 
     
-
+#This function is repsonsile for processing the options and arguments provided with
+#the invocation call of the program. 
+#essentially the function scans the argument vector for "-X" type options and their meta arguments 
+#and then calls the correspondign function for the option, providign it with the meta arguments 
 def processArgs():
     args = sys.argv  
     args.pop(0) 
@@ -90,7 +98,12 @@ def processArgs():
                 Utils.printErrorMessage("CAN'T USE BOTH REPO(-r) AND LIST(-l) OPTIONS") 
                 exit(1) 
             listOptionFunc(map["-l"]) 
-            filesProvided = True 
+            filesProvided = True  
+        elif opt == "-xt": 
+            excTypeOptionFunc(map["-xt"]) 
+        elif opt == "-x":  
+            excFilesOpt()
+
         
     
     if filesProvided == False: 
@@ -106,21 +119,73 @@ def processArgs():
 
 
 #functions for different options and their args 
-#wanted to keep the fucntions sepreate for logical organization and ease of arg extention  
+#wanted to keep the fucntions sepreate for logical organization and ease of arg extention   
+
+#the function corresponding to the "-r" (repository) option 
+#sets the program to run scans on the src files found in the repository provided 
+#location is a list string arugment where index 0 contains the path to the repository intended to be scanned 
+#the function makes a temp folder and copies the files from the repoitory at location into the temp folder, the temp folder 
+#being what will serve as the current working directory
 def repoOptionFunc(location):  
     #cloning repo provided by location    
     try: 
-        shutil.copytree(location[0], Utils.getProjRoot() + "mem/temp")  
+        shutil.copytree(location[0], Utils.getProjRoot() + "data/temp")  
     except FileExistsError as excp:
-        Utils.quitInError("TEMP ALREADY EXISTES PLEASE RENAME OR DELETE") 
+        Utils.quitInError("TEMP ALREADY EXISTS PLEASE RENAME OR DELETE") 
     except FileNotFoundError as excp: 
         Utils.quitInError("PATH TO SRC DOSEN'T EXIST")
     except shutil.Error as excp: 
         Utils.quitInError("CHOULDN'T COPY FILES TO SCAN")
 
-def listOptionFunc(list):   
-    return "nil"
+#the fucntion corresponding to the "-l" (list) option 
+#sets the program to run scans on the src files indicated by the list of file paths provided 
+#list is an string list arugment that has a list of paths corresponding to the files to be scaned 
+#the function copies each of the indicated files into a new temp repository
+def listOptionFunc(list):  
+    tempDir = Utils.getProjRoot() + "data/temp" 
 
+    try:
+        os.mkdir(tempDir)    
+    except FileExistsError as excp: 
+         Utils.quitInError("TEMP ALREADY EXISTS PLEASE RENAME OR DELETE") 
+
+    for file in list:  
+        fileName = file.split("/")[-1]
+        shutil.copyfile(file,tempDir + "/" + fileName)  
+
+#the fucntion correspondingn ot the "-xt" (exclude type) option 
+#sets the program to exclude the file types indicated by the arugment from the scans  
+#types arugment is a list of strings. The list contain extensions which indicate the file types that should be ignored when scanning 
+#the function works by remvoing each file with an extension in the arugment  from the temp diectory
+def excTypeOptionFunc(types):   
+    setOfExpTypes = set(types) 
+    listOfExpFiles = []
+    for root, dirs, files in os.walk(Utils.getProjRoot() + "data/temp"): 
+        for file in files: 
+            if file.split(".")[-1] in setOfExpTypes: 
+                os.remove(os.path.join(root,file))   
+
+    Utils.printNotiMessage("EXCLUDED: " + str(setOfExpTypes) + " FILE TYPES") 
+
+#the function that corresponds to the "-x" (exclude) option 
+#sets the program to exlcude the files indicated by the excludeFile.yaml file from the scan 
+#works by removing files in the temp folder that are indicated on the excludeFile file
+def excFilesOpt(): 
+    with open(Utils.getProjRoot() + "data/excludeFile.yaml", "r") as fp: 
+        excList = yaml.load(fp, Loader=yaml.FullLoader)["excludeFiles"] 
+
+    for file in excList: 
+        os.remove(Utils.getProjRoot() + "data/temp/" + file)  
+    
+    Utils.printNotiMessage("EXCLUDED: " + str(excList) + " FILES")
+    
+    
+    
+
+      
+
+
+#start the program
 start()
      
 

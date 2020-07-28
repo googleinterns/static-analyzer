@@ -31,10 +31,10 @@ def printTestOutput(str):
 
 class TestReportReader(unittest.TestCase): 
 
-    def test_sucsessRead(self):  
+    def test_successRead(self):  
         #initalize   
-        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "mem/temp")
-        os.chdir(Utils.getProjRoot() + "mem/temp") 
+        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "data/temp")
+        os.chdir(Utils.getProjRoot() + "data/temp") 
         
         reportReader = ReportReader([
                                 Task(toolName = "Pylint", command= ["pylint temp --output-format=json"], 
@@ -47,16 +47,16 @@ class TestReportReader(unittest.TestCase):
         
         #deinitilize   
         os.chdir(Utils.getProjRoot() + "bin")  
-        shutil.rmtree(Utils.getProjRoot() + "mem/temp")  
+        shutil.rmtree(Utils.getProjRoot() + "data/temp")  
 
         #assert 
-        with open(RES_DIR + "test_sucsessRead.txt") as expected:  
+        with open(RES_DIR + "test_successRead.txt") as expected:  
             assert expected.read().strip() == result.strip() 
 
     def test_falseTaskRead(self):  
         #initalize   
-        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "mem/temp")
-        os.chdir(Utils.getProjRoot() + "mem/temp")  
+        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "data/temp")
+        os.chdir(Utils.getProjRoot() + "data/temp")  
 
         task1 = Task(toolName = "Pylint", command= ["pylint temp --output-format=json"], 
                                 method = "FILE",requestCommands = [ 
@@ -71,7 +71,7 @@ class TestReportReader(unittest.TestCase):
         
         #deinitilize   
         os.chdir(Utils.getProjRoot() + "bin")  
-        shutil.rmtree(Utils.getProjRoot() + "mem/temp")  
+        shutil.rmtree(Utils.getProjRoot() + "data/temp")  
 
         #assert 
         with open(RES_DIR + "test_falseTaskRead.txt") as expected:  

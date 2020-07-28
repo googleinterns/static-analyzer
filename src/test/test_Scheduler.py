@@ -31,9 +31,9 @@ def printTestOutput(str):
 
 class TestScheduler(unittest.TestCase): 
 
-    def test_sucsessSch(self):  
+    def test_successSch(self):  
         #initalize   
-        os.chdir(Utils.getProjRoot() + "mem/testTemp") 
+        os.chdir(Utils.getProjRoot() + "data/testTemp") 
         
         scheduler = Scheduler(intFile)
         schedule = scheduler.makeSchedule() 
@@ -45,8 +45,8 @@ class TestScheduler(unittest.TestCase):
         expected = set({"Pylint","SonarQube"})
 
        
-        #asser 
-        assert expected == result 
+        #assert
+        assert expected == result  
 
     
 

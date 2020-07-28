@@ -33,10 +33,10 @@ def printTestOutput(str):
 
 class TestEngine(unittest.TestCase): 
 
-    def test_sucsessRun(self):  
+    def test_successRun(self):  
         #initalize   
-        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "mem/temp")
-        os.chdir(Utils.getProjRoot() + "mem/temp") 
+        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "data/temp")
+        os.chdir(Utils.getProjRoot() + "data/temp") 
         capturedOutput = io.StringIO() 
         sys.stdout = capturedOutput
 
@@ -55,16 +55,16 @@ class TestEngine(unittest.TestCase):
         #deinitilize   
         sys.stdout = sys.__stdout__
         os.chdir(Utils.getProjRoot() + "bin")  
-        shutil.rmtree(Utils.getProjRoot() + "mem/temp")  
+        shutil.rmtree(Utils.getProjRoot() + "data/temp")  
 
         #assert 
-        with open(RES_DIR + "test_sucsessRun.txt") as expected:  
+        with open(RES_DIR + "test_successRun.txt") as expected:  
             assert expected.read().strip() == capturedOutput.getvalue().strip() 
 
     def test_failSQPassPLRun(self):  
         #initalize   
-        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "mem/temp")
-        os.chdir(Utils.getProjRoot() + "mem/temp") 
+        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "data/temp")
+        os.chdir(Utils.getProjRoot() + "data/temp") 
         capturedOutput = io.StringIO() 
         sys.stdout = capturedOutput
 
@@ -81,7 +81,7 @@ class TestEngine(unittest.TestCase):
         #deinitilize   
         sys.stdout = sys.__stdout__
         os.chdir(Utils.getProjRoot() + "bin")  
-        shutil.rmtree(Utils.getProjRoot() + "mem/temp")  
+        shutil.rmtree(Utils.getProjRoot() + "data/temp")  
 
         
         #assert 
@@ -90,8 +90,8 @@ class TestEngine(unittest.TestCase):
 
     def test_failBothSARun(self):  
         #initalize   
-        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "mem/temp")
-        os.chdir(Utils.getProjRoot() + "mem/temp") 
+        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "data/temp")
+        os.chdir(Utils.getProjRoot() + "data/temp") 
         capturedOutput = io.StringIO() 
         sys.stdout = capturedOutput
 
@@ -108,7 +108,7 @@ class TestEngine(unittest.TestCase):
         #deinitilize   
         sys.stdout = sys.__stdout__
         os.chdir(Utils.getProjRoot() + "bin")  
-        shutil.rmtree(Utils.getProjRoot() + "mem/temp") 
+        shutil.rmtree(Utils.getProjRoot() + "data/temp") 
 
         #assert 
         with open(RES_DIR + "test_failBothSARun.txt") as expected:  
@@ -119,8 +119,8 @@ class TestEngine(unittest.TestCase):
 
     def test_emptySch(self):  
         #initalize   
-        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "mem/temp")
-        os.chdir(Utils.getProjRoot() + "mem/temp") 
+        shutil.copytree(Utils.getProjRoot() + "test/src" , Utils.getProjRoot() + "data/temp")
+        os.chdir(Utils.getProjRoot() + "data/temp") 
         capturedOutput = io.StringIO() 
         sys.stdout = capturedOutput
 
@@ -131,7 +131,7 @@ class TestEngine(unittest.TestCase):
         #deinitilize   
         sys.stdout = sys.__stdout__
         os.chdir(Utils.getProjRoot() + "bin")  
-        shutil.rmtree(Utils.getProjRoot() + "mem/temp") 
+        shutil.rmtree(Utils.getProjRoot() + "data/temp") 
 
         
         

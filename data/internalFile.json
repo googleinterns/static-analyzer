@@ -12,8 +12,8 @@
             "method":"API",  
             "requestCommands": ["http://localhost:9000/api/issues/search?componentKeys=test1&resolved=false"], 
             "sucRetCodes": [0,1], 
-            "output": "mem/analyzerOutput/SonarQube.json", 
-            "error":  "mem/analyzerOutput/SonarQubeErr.json",
+            "output": "data/analyzerOutput/SonarQube.json", 
+            "error":  "data/analyzerOutput/SonarQubeErr.json",
             "mapping": { 
                      "vulList": "issues",   
                      "file": "component", 
@@ -31,8 +31,8 @@
             "method":"FILE", 
             "requestCommands":["python3 ../../static-analyzers/pyLint/formatOutput.py", "../analyzerOutput/PyLint.json"],  
             "sucRetCodes": [0,16,22], 
-            "output": "mem/analyzerOutput/PyLint.json", 
-            "error":  "mem/analyzerOutput/PyLintErr.json",
+            "output": "data/analyzerOutput/PyLint.json", 
+            "error":  "data/analyzerOutput/PyLintErr.json",
             "mapping": {
                 "vulList": "vulList", 
                 "file": "path", 
