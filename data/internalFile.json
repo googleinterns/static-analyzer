@@ -1,0 +1,48 @@
+{  
+
+
+"tools":{ 
+
+        "SonarQube": {
+            "toolName":"SonarQube",  
+            "fileTypes": ["java"],  
+            "invokeCommands": ["../../static-analyzers/sonarQube/sonarqube-8.3.1.34397/bin/linux-x86-64/sonar.sh start",
+                                "python3 ../../static-analyzers/sonarQube/scripts/waitForServer.py 300", 
+                                "../../static-analyzers/sonarQube/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner"],
+            "method":"API",  
+            "requestCommands": ["http://localhost:9000/api/issues/search?componentKeys=test1&resolved=false"], 
+            "sucRetCodes": [0,1], 
+            "output": "data/analyzerOutput/SonarQube.json", 
+            "error":  "data/analyzerOutput/SonarQubeErr.json",
+            "mapping": { 
+                     "vulList": "issues",   
+                     "file": "component", 
+                     "description": "message",
+                     "location": "line"
+                     
+
+                    } 
+        }, 
+
+        "Pylint":{ 
+            "toolName":"Pylint", 
+            "fileTypes": ["py"], 
+            "invokeCommands":["pylint temp --output-format=json"], 
+            "method":"FILE", 
+            "requestCommands":["python3 ../../static-analyzers/pyLint/formatOutput.py", "../analyzerOutput/PyLint.json"],  
+            "sucRetCodes": [0,16,22], 
+            "output": "data/analyzerOutput/PyLint.json", 
+            "error":  "data/analyzerOutput/PyLintErr.json",
+            "mapping": {
+                "vulList": "vulList", 
+                "file": "path", 
+                "description":"message", 
+                "location": "line"
+            } 
+
+
+        }
+    }  
+    
+
+}

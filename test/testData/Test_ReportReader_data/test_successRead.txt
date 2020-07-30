@@ -1,0 +1,59 @@
+description: Trailing whitespace
+toolName: Pylint
+file: testp.py
+location: 1
+
+description: Trailing whitespace
+toolName: Pylint
+file: testp.py
+location: 5
+
+description: Unnecessary parens after 'print' keyword
+toolName: Pylint
+file: testp.py
+location: 5
+
+description: Trailing whitespace
+toolName: Pylint
+file: testp.py
+location: 9
+
+description: Unnecessary parens after 'print' keyword
+toolName: Pylint
+file: testp.py
+location: 9
+
+description: Trailing whitespace
+toolName: Pylint
+file: testp.py
+location: 12
+
+description: Unnecessary parens after 'if' keyword
+toolName: Pylint
+file: testp.py
+location: 12
+
+description: Trailing whitespace
+toolName: Pylint
+file: testp.py
+location: 13
+
+description: Unnecessary parens after 'print' keyword
+toolName: Pylint
+file: testp.py
+location: 13
+
+description: Trailing whitespace
+toolName: Pylint
+file: testp.py
+location: 15
+
+description: Missing module docstring
+toolName: Pylint
+file: testp.py
+location: 1
+
+description: Constant name "blagUjdnk989" doesn't conform to UPPER_CASE naming style
+toolName: Pylint
+file: testp.py
+location: 15
