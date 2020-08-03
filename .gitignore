@@ -1,12 +1,11 @@
 *.logs
 /data/analyzerOutput
-/static-analyzers/sonarQube/sonarqube-8.3.1.34397/logs 
-/static-analyzers/sonarQube/sonarqube-8.3.1.34397/data 
-/static-analyzers/sonarQube/sonarqube-8.3.1.34397/temp 
+/static-analyzers/sonarQube/sonarqube-8.4.1.35646 
+/static-analyzers/sonarQube/sonarqube-8.4.1.35646.zip
 /src/__pycache__  
-static-analyzers/sonarQube/sonarqube-8.3.1.34397/bin/linux-x86-64/SonarQube.pid 
 /.vscode 
 /NIL 
 .scannerwork/
 static-analyzers/sonarQube/sonar-scanner-4.4.0.2170-linux 
-static-analyzers/sonarQube/sonarqube-8.3.1.34397
+static-analyzers/sonarQube/sonar-scanner-cli-4.4.0.2170-linux.zip 
+/reports

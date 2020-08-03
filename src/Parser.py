@@ -7,7 +7,8 @@ import re
 import yaml
 from Scheduler import Scheduler  
 from Engine import Engine 
-from ReportReader import ReportReader 
+from ReportReader import ReportReader  
+from ReportGenerator import ReportGenerator
 
 #The parser file is the overall wrapper for the static analyzder tool. 
 #all of the classes that the progran uses is intialzied and ran in this file and this 
@@ -22,8 +23,14 @@ from ReportReader import ReportReader
 
 #This function is the startign point of the entire program  
 #The workflow: parse input & initalize -> make schedule -> execute task 
-#-> generate general report
-def start():   
+#-> generate general report 
+global name  
+name = "" 
+
+global verbose 
+verbose = False
+def start():  
+
     #process arugments 
     processArgs()  
 
@@ -49,8 +56,10 @@ def start():
     
 
     #generate report 
-    reportReader = ReportReader(schedule=schedule,intFile=intFile)
-    print(reportReader.parseReports())
+    reportReader = ReportReader(schedule=schedule,intFile=intFile) 
+    reportGenerator =ReportGenerator(report =reportReader.parseReports(), name=name, verbose=verbose )
+    reportGenerator.generateReports()
+
 
     
 
@@ -58,7 +67,6 @@ def start():
     #delete repo when processes and scans are done 
     os.chdir(Utils.getProjRoot() + "bin")  
     shutil.rmtree(Utils.getProjRoot() + "data/temp")
-
 
     return "NTI"
 
@@ -102,7 +110,11 @@ def processArgs():
         elif opt == "-xt": 
             excTypeOptionFunc(map["-xt"]) 
         elif opt == "-x":  
-            excFilesOpt()
+            excFilesOpt() 
+        elif opt == "-n": 
+            nameFilesOpt(map["-n"]) 
+        elif opt == "-v": 
+            verboseOpt()
 
         
     
@@ -127,7 +139,10 @@ def processArgs():
 #the function makes a temp folder and copies the files from the repoitory at location into the temp folder, the temp folder 
 #being what will serve as the current working directory
 def repoOptionFunc(location):  
-    #cloning repo provided by location    
+    #cloning repo provided by location  
+
+    global name    
+    name = location[0].replace("/","-")
     try: 
         shutil.copytree(location[0], Utils.getProjRoot() + "data/temp")  
     except FileExistsError as excp:
@@ -142,8 +157,10 @@ def repoOptionFunc(location):
 #list is an string list arugment that has a list of paths corresponding to the files to be scaned 
 #the function copies each of the indicated files into a new temp repository
 def listOptionFunc(list):  
-    tempDir = Utils.getProjRoot() + "data/temp" 
+    tempDir = Utils.getProjRoot() + "data/temp"   
 
+    global name
+    name = list[0].replace("/","-")
     try:
         os.mkdir(tempDir)    
     except FileExistsError as excp: 
@@ -177,7 +194,19 @@ def excFilesOpt():
     for file in excList: 
         os.remove(Utils.getProjRoot() + "data/temp/" + file)  
     
-    Utils.printNotiMessage("EXCLUDED: " + str(excList) + " FILES")
+    Utils.printNotiMessage("EXCLUDED: " + str(excList) + " FILES") 
+
+#option function for the "-n" (name) option 
+#sets the program reports name o] 
+#works by overriding name attribute that might have been set by eiher -r or -l option
+def nameFilesOpt(_name):   
+    global name
+    name = _name[0] 
+
+def verboseOpt(): 
+    global verbose 
+    verbose = True
+
     
     
     
@@ -186,7 +215,7 @@ def excFilesOpt():
 
 
 #start the program 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     start()
      
 
