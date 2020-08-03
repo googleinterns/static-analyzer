@@ -11,5 +11,5 @@ NOTICE: RUNNING Pylint...
 NOTICE: SCANS DONE
 **************************
 **************************
-NOTICE: ALL SCANS WERE NOT SUCSESSFUL
+NOTICE: ALL SCANS WERE NOT SUCCESSFUL
 **************************

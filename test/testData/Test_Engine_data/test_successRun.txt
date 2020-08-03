@@ -11,11 +11,11 @@ NOTICE: RUNNING Pylint...
 NOTICE: SCANS DONE
 **************************
 **************************
-NOTICE: SonarQube SCAN SUCESSFUL
+NOTICE: SonarQube SCAN SUCCESSFUL
 **************************
 **************************
-NOTICE: Pylint SCAN SUCESSFUL
+NOTICE: Pylint SCAN SUCCESSFUL
 **************************
 **************************
-NOTICE: ALL SCANS WERE SUCSESSFUL
+NOTICE: ALL SCANS WERE SUCCESSFUL
 **************************

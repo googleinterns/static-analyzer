@@ -11,8 +11,8 @@ NOTICE: RUNNING Pylint...
 NOTICE: SCANS DONE
 **************************
 **************************
-NOTICE: Pylint SCAN SUCESSFUL
+NOTICE: Pylint SCAN SUCCESSFUL
 **************************
 **************************
-NOTICE: ALL SCANS WERE NOT SUCSESSFUL
+NOTICE: ALL SCANS WERE NOT SUCCESSFUL
 **************************

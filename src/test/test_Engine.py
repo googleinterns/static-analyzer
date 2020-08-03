@@ -47,16 +47,17 @@ class TestEngine(unittest.TestCase):
                                 mapping={}),
                                 Task(toolName = "Pylint", command= ["pylint temp --output-format=json"], 
                                 method = "NIL",requestCommands = "NIL", sucRetCodes=[0,16,22],output="NIL", error="NIL",
-                                mapping={})],intFile) 
+                                mapping={})]) 
         engine.run() 
 
-           
+        
 
         #deinitilize   
         sys.stdout = sys.__stdout__
         os.chdir(Utils.getProjRoot() + "bin")  
         shutil.rmtree(Utils.getProjRoot() + "data/temp")  
 
+       
         #assert 
         with open(RES_DIR + "test_successRun.txt") as expected:  
             assert expected.read().strip() == capturedOutput.getvalue().strip() 
@@ -73,7 +74,7 @@ class TestEngine(unittest.TestCase):
                                 mapping={}),
                                 Task(toolName = "Pylint", command= ["pylint temp --output-format=json"], 
                                 method = "NIL",requestCommands = "NIL", sucRetCodes=[0,16,22],output="NIL", error="NIL",
-                                mapping={})],intFile)
+                                mapping={})])
         engine.run() 
 
            
@@ -81,7 +82,9 @@ class TestEngine(unittest.TestCase):
         #deinitilize   
         sys.stdout = sys.__stdout__
         os.chdir(Utils.getProjRoot() + "bin")  
-        shutil.rmtree(Utils.getProjRoot() + "data/temp")  
+        shutil.rmtree(Utils.getProjRoot() + "data/temp") 
+
+          
 
         
         #assert 
@@ -100,7 +103,7 @@ class TestEngine(unittest.TestCase):
                                 mapping={}),
                                 Task(toolName = "Pylint", command= ["BAD COMMAND"], 
                                 method = "NIL",requestCommands = "NIL", sucRetCodes=[0,16,22],output="NIL", error="NIL",
-                                mapping={})],intFile)
+                                mapping={})])
         engine.run() 
 
            
@@ -109,7 +112,7 @@ class TestEngine(unittest.TestCase):
         sys.stdout = sys.__stdout__
         os.chdir(Utils.getProjRoot() + "bin")  
         shutil.rmtree(Utils.getProjRoot() + "data/temp") 
-
+        
         #assert 
         with open(RES_DIR + "test_failBothSARun.txt") as expected:  
             assert expected.read().strip() == capturedOutput.getvalue().strip() 
@@ -124,7 +127,7 @@ class TestEngine(unittest.TestCase):
         capturedOutput = io.StringIO() 
         sys.stdout = capturedOutput
 
-        engine = Engine([],intFile) 
+        engine = Engine([]) 
         engine.run() 
        
 
@@ -134,7 +137,7 @@ class TestEngine(unittest.TestCase):
         shutil.rmtree(Utils.getProjRoot() + "data/temp") 
 
         
-        
+       
         #assert 
         with open(RES_DIR + "test_emptySch.txt") as expected:  
             assert expected.read().strip() == capturedOutput.getvalue().strip()
