@@ -15,12 +15,10 @@ from Scheduler import Task
 class ReportReader:  
 
     #To-Do: 
-        #finish get report (local & cli) functions  
         #error prevention (espically keys errors, connection errors)
         #other details for report 
         #multi cmd calls 
         #dont get files when scans fail 
-        #might not need request ovjects sinbce task hhas all info already 
 
     #As far as I know three ways to get the json reports of statix analyzers based off 
     #of where they put them and acsess 
@@ -46,19 +44,21 @@ class ReportReader:
     #it then uses the mapping info from the internal file to scrap info from the specfic reports and append to the general report
     def parseReports(self):  
         reports = []   
-        genReport = ""
+        genVulList = []
+        
 
         #load report strings into array 
-        requests = self.__getRequests() 
-        for request in requests:  
+        for task in self.__schedule:  
            
-            if (request.method == "FILE"): 
-                reports.append(Report(request.toolName, self.__getLocalFile(request.requestCommands))) 
-            elif(request.method == "API"):  
-                #returns strign from file
-                 reports.append(Report(request.toolName,self.__getApiFile(request.requestCommands)))    
-            elif(request.method == "CL"): 
-                print("run file commands")  
+            if (task.method == "FILE"):  
+                report = self.__getLocalFile(toolName=task.toolName, requestCommands=task.requestCommands) 
+                if report != "FAILED":
+                    reports.append(Report(task.toolName, report)) 
+            elif(task.method == "API"):  
+                #returns strign from file 
+                report = self.__getApiFile(toolName=task.toolName, requestCommands=task.requestCommands) 
+                if report != "FAILED":
+                    reports.append(Report(task.toolName,report))    
             else:  
                 Utils.printErrorMessage("INVALID REQUEST METHOD")  
          
@@ -67,35 +67,21 @@ class ReportReader:
             mapping = self.__intFile["tools"][report.toolName]["mapping"] 
             vuls = repObj[mapping["vulList"]]  
             for vul in vuls: 
-                genReport = self.__addToGenReport(genReport=genReport, vul=vul, mapping = mapping, toolName=report.toolName )  
+                genVulList.append(self.__addToGenReport( vul=vul, mapping = mapping, toolName=report.toolName ) ) 
 
+        #add overall infomation/ create whole object 
+        count = len(genVulList)  
+        if count == 0: 
+            status = True  
+        else: 
+            status = False
+        genRepObj ={ 
+            "passed": status, 
+            "numOfVuls": count, 
+            "listOfVuls": genVulList
+        } 
 
-        return genReport
-
-
-
-
-        
-
-        
-
-
-    #gets the method of how to reterive report
-    def __getRequests(self):  
-        requests = []
-        #loads internal file 
-        # creates method objects for each tool in schedule 
-        # based on internal file  
-        # adds request objects into list  
-
-       
-       
-        #for the tools in each task in the schedule, get request methods/info
-        for task in self.__schedule: 
-            if task.status == True:    
-                requests.append(Request(toolName = task.toolName,method = task.method, requestCommands = task.requestCommands)) 
-        
-        return requests  
+        return json.dumps(genRepObj)
 
 
     #private function that appends an analyzer's report's issue to the general report  
@@ -105,19 +91,20 @@ class ReportReader:
     #toolName string, which is th ename of the tool of which thsi issue originated from; The name used is the one defined in the internal file  
     #for a given issue/vulrnability the function maps data presented in the specfic report to the counterpart words thart describe the data in the general report 
     # it appends the strings created by this mapping into the overall general report string  
-    def __addToGenReport(self, genReport, vul, mapping, toolName): 
-        genReport += "\n" 
-        genReport += "description: " + vul[mapping["description"]] + "\n" 
-        genReport += "toolName: " + str(toolName) + "\n"  
-        genReport += "file: " + vul[mapping["file"]] + "\n"  
-        #some issues may not have locations
+    def __addToGenReport(self, vul, mapping, toolName):   
         try:
-            genReport += "location: " + str(vul[mapping["location"]]) + "\n"  
+            locStr = vul[mapping["location"]] 
         except KeyError:  
-            genReport += "location: " + "NO LOCATION" + "\n" 
-            
+            locStr = "NO LOCATION"  
+        
+        genVulObj = { 
+            "description": vul[mapping["description"]], 
+            "toolName": str(toolName), 
+            "file": vul[mapping["file"]], 
+            "location": locStr             
+        }
 
-        return genReport 
+        return genVulObj
 
 
     
@@ -129,7 +116,7 @@ class ReportReader:
 #that help with the acsessing and parsing of the local file 
 #the function works by executing each command string prior to the last one via the shell. it then uses the last strng as a path to  
 #open and read the json file, returning its contents.  
-    def __getLocalFile(self, requestCommands): 
+    def __getLocalFile(self, toolName, requestCommands): 
         length = len(requestCommands)
         curr = 0
         for command in requestCommands:  
@@ -146,7 +133,7 @@ class ReportReader:
 #the json of the specfic report. And the string request prior to last should be prepatory post request 
 #the function works by making a post request using each string prior to the last one and then making a get request using the final string 
 #to reterive and then return the string json contents of the specfic report
-    def __getApiFile(self,requestCommands):  
+    def __getApiFile(self,toolName,requestCommands):  
         #method objects contain strings that help get files 
         #an API method will contain uri's for acsessing the report 
 
@@ -156,11 +143,21 @@ class ReportReader:
         curr = 0
         for command in requestCommands:  
             curr +=1  
-            if(curr == length):  
-                jsonReport = requests.get(command).text 
-                return jsonReport 
-            else: 
-                requests.post(command) 
+            if(curr == length):   
+                try:
+                    jsonReport = requests.get(command,timeout=10.00).text 
+                    return jsonReport 
+                except requests.exceptions.RequestException: 
+                    Utils.printErrorMessage("FAILED TO RETERIVE " +toolName + "'s REPORT")  
+                    return "FAILED"
+            else:  
+                try:
+                    requests.post(command, timeout=10.00)  
+                except requests.exceptions.RequestException: 
+                    Utils.printErrorMessage("FAILED TO RETERIVE " +toolName + "'s REPORT")  
+                    return "FAILED"
+                    break
+
 
         
 
@@ -174,14 +171,10 @@ class Report:
     def __init__(self, toolName, json): 
         self.toolName = toolName 
         self.json = json   
+       
         
     
-    
-class Request: 
-    def __init__(self, toolName, method, requestCommands): 
-        self.toolName = toolName 
-        self.method = method 
-        self.requestCommands = requestCommands  
+      
 
     
 
