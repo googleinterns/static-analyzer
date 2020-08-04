@@ -3,11 +3,13 @@ import os
 import Utils
 #script used to set up program on machine that has never ran the program before 
 #mainly takes care of static analyzer installation and configuration  
-
-
+ROOT = Utils.getProjRoot()
+#make needed directories 
+os.mkdir(ROOT + "data/analyzerOutput") 
+os.mkdir(ROOT + "reports")
 
 #sonarQube   
-sonarQubeRoot = Utils.getProjRoot() + "static-analyzers/sonarQube"
+sonarQubeRoot = ROOT + "static-analyzers/sonarQube"
 #download and unzip sonarQube dependices
 os.chdir(sonarQubeRoot) 
 subprocess.run("curl -LO https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.4.1.35646.zip", shell=True) 
@@ -35,6 +37,6 @@ subprocess.run("chmod +x " + sonarQubeRoot +"/sonar-scanner-4.4.0.2170-linux/bin
 subprocess.run("chmod +x " + sonarQubeRoot +"/sonar-scanner-4.4.0.2170-linux/jre/bin/java", shell=True) 
 
 #pyLint  
-pyLintRoot = Utils.getProjRoot() + "static-analyzers/pyLint/" 
+pyLintRoot = Root + "static-analyzers/pyLint/" 
 os.chdir(pyLintRoot)
 subprocess.run("pip install pylint", shell=True)
