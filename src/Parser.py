@@ -39,7 +39,7 @@ def start():
      
 
     #open internal file and turn it to json object 
-    with open(Utils.getProjRoot() + "/data/internalFile.json","r") as fp:  
+    with open(Utils.getProjRoot() + "data/internalFile.json","r") as fp:  
             intFile = json.load(fp)    
 
     os.chdir(Utils.getProjRoot() + "data/temp")

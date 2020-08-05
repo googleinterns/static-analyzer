@@ -48,13 +48,13 @@ class ReportReader:
         genVulList = []
         
         Utils.printNotiMessage("PROVIDING TIME FOR ANALYZER REPORT UPDATES...") 
-        time.sleep(5.00)  
+        time.sleep(10.00)  
         Utils.printNotiMessage("PROCESSING REPORTS...")
 
 
         #load report strings into array 
         for task in self.__schedule:  
-           
+           if task.status == True:
             if (task.method == "FILE"):  
                 report = self.__getLocalFile(toolName=task.toolName, requestCommands=task.requestCommands) 
                 if report != "FAILED":
