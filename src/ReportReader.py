@@ -48,7 +48,7 @@ class ReportReader:
         genVulList = []
         
         Utils.printNotiMessage("PROVIDING TIME FOR ANALYZER REPORT UPDATES...") 
-        time.sleep(10.00)  
+        time.sleep(120.00)  
         Utils.printNotiMessage("PROCESSING REPORTS...")
 
 

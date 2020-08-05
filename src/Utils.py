@@ -78,7 +78,7 @@ def setup():
 
         #pyLint  
         pyLintRoot = ROOT + "static-analyzers/pyLint/" 
-        os.chdir(pyLintRoot) 
+        os.chdir(pyLintRoot)  
         subprocess.run("pip install pylint", shell=True)
 
 
