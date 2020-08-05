@@ -30,7 +30,9 @@ name = ""
 global verbose 
 verbose = False
 def start():  
-
+    #setup/initalize 
+    Utils.setup() 
+    
     #process arugments 
     processArgs()  
 
