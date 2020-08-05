@@ -37,7 +37,7 @@ def quitInError(message):
 
 #returns the path of the root dirctory of the program
 def getProjRoot():  
-    return str(Path.home()) + "/staticAnaProj/" 
+    return str(Path.home()) + "/static-analyzer/" 
 
     
 

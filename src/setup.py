@@ -1,6 +1,7 @@
 import subprocess 
 import os 
-import Utils
+import Utils 
+#combine intomain tool
 #script used to set up program on machine that has never ran the program before 
 #mainly takes care of static analyzer installation and configuration  
 ROOT = Utils.getProjRoot()
