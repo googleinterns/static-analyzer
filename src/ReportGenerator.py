@@ -3,11 +3,13 @@ import Utils
 import json 
 class ReportGenerator: 
 
-    def __init__(self,report,name):
+    def __init__(self,report,name,verbose):
         self.__report = report   
-        self.__fileName = name + str(datetime.now())  
+        self.__fileName = name + str(datetime.now()) 
+        self._verbose = verbose  
 
     def generateReports(self): 
+        self.__genString() 
         self.__genHTML() 
         self.__genJSON()  
         self.__genCl() 
@@ -18,12 +20,12 @@ class ReportGenerator:
         string = "passed: " + str(jsonObj["passed"]) + " " + "numOfVuls: " + str(jsonObj["numOfVuls"]) + " \n"
 
         for vul in jsonObj["listOfVuls"]:
-            string += "description: " + vul["description"] + "\n" 
+            string += "\ndescription: " + vul["description"] + "\n" 
             string +=  "toolName: " + vul["toolName"] + "\n" 
             string += "file: " + vul["file"] + "\n"
             string += "location: " + str(vul["location"]) + "\n"
 
-        return string  
+        self.__string = string  
 
     def __genHTML(self): 
         string = "" 
@@ -34,7 +36,7 @@ class ReportGenerator:
         string += "     <meta charset = \"UTF-8\" />\n" 
         string += "</head>\n" 
         string += "<body>\n" 
-        string += self.__genString() +"\n" 
+        string += self.__string +"\n" 
         string += "</body>\n" 
         string += "</html>" 
 
@@ -53,8 +55,12 @@ class ReportGenerator:
         string = "\n"
         string += "Pass?: " + str(jsonObj["passed"]) +"\n" 
         string += "NoOfIssues " + str(jsonObj["numOfVuls"]) + "\n" 
-        string += "Check Reports For Robust Info"
+        string += "Check Reports For Verbose Info or use -v" 
         Utils.printNotiMessage(string)
+
+        if self._verbose: 
+            Utils.printNotiMessage(self.__string)
+       
        
 
     

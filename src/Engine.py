@@ -6,9 +6,6 @@ import shutil
 import Utils  
 import sys 
 
- #TO-DO: 
-        #implementing multi cmd calls (sonarQube server -> scanner)  
-        #instead   of paassing inn int ffiel I can puuuut ouutput and eerr files in tasll
 
 #The Engine class is responsible for invoking the scans of the appropiate static analyzers  
 #Its constructor takes in a schedule which is a list of task objects; (Task objects are defined in schedule.py) 

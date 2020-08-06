@@ -25,9 +25,14 @@ from ReportGenerator import ReportGenerator
 #The workflow: parse input & initalize -> make schedule -> execute task 
 #-> generate general report 
 global name  
-name = ""
-def start():  
+name = "" 
 
+global verbose 
+verbose = False
+def start():  
+    #setup/initalize 
+    Utils.setup() 
+    
     #process arugments 
     processArgs()  
 
@@ -36,7 +41,7 @@ def start():
      
 
     #open internal file and turn it to json object 
-    with open(Utils.getProjRoot() + "/data/internalFile.json","r") as fp:  
+    with open(Utils.getProjRoot() + "data/internalFile.json","r") as fp:  
             intFile = json.load(fp)    
 
     os.chdir(Utils.getProjRoot() + "data/temp")
@@ -54,7 +59,7 @@ def start():
 
     #generate report 
     reportReader = ReportReader(schedule=schedule,intFile=intFile) 
-    reportGenerator =ReportGenerator(report =reportReader.parseReports(), name=name )
+    reportGenerator =ReportGenerator(report =reportReader.parseReports(), name=name, verbose=verbose )
     reportGenerator.generateReports()
 
 
@@ -65,7 +70,6 @@ def start():
     os.chdir(Utils.getProjRoot() + "bin")  
     shutil.rmtree(Utils.getProjRoot() + "data/temp")
 
-    print(name)
     return "NTI"
 
     
@@ -110,7 +114,9 @@ def processArgs():
         elif opt == "-x":  
             excFilesOpt() 
         elif opt == "-n": 
-            nameFilesOpt(map["-n"])
+            nameFilesOpt(map["-n"]) 
+        elif opt == "-v": 
+            verboseOpt()
 
         
     
@@ -197,7 +203,11 @@ def excFilesOpt():
 #works by overriding name attribute that might have been set by eiher -r or -l option
 def nameFilesOpt(_name):   
     global name
-    name = _name[0]
+    name = _name[0] 
+
+def verboseOpt(): 
+    global verbose 
+    verbose = True
 
     
     
