@@ -7,8 +7,6 @@ import os
 #the constructor takes in an intFile object, which is the deseralized contents of the internal file 
 class Scheduler: 
 #To do: 
-    #Testign and bug handeling  
-    #turn that list into a set mate
 
     #exposed public function, makes and returns schedule  
 
@@ -54,7 +52,7 @@ class Scheduler:
         for file in files: 
             ext.append(file.split(".")[-1]) 
 
-        return ext
+        return set(ext)
         
 #Task objects represents an analyzer job/scan that needs to be done and contains info to assist 
 #each task is associated with a static analyzer  

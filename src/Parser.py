@@ -13,12 +13,6 @@ from ReportGenerator import ReportGenerator
 #The parser file is the overall wrapper for the static analyzder tool. 
 #all of the classes that the progran uses is intialzied and ran in this file and this 
 #is the starting point of the program is located.  
-
-
-#ToDo later
-#use argparse library 
-#switch task varibles to private/use getters
-   
     
 
 #This function is the startign point of the entire program  
@@ -32,7 +26,7 @@ verbose = False
 def start():  
     #setup/initalize 
     Utils.setup() 
-    
+
     #process arugments 
     processArgs()  
 
@@ -169,8 +163,11 @@ def listOptionFunc(list):
          Utils.quitInError("TEMP ALREADY EXISTS PLEASE RENAME OR DELETE") 
 
     for file in list:  
-        fileName = file.split("/")[-1]
-        shutil.copyfile(file,tempDir + "/" + fileName)  
+        fileName = file.split("/")[-1] 
+        try:
+            shutil.copyfile(file,tempDir + "/" + fileName)  
+        except FileExistsError: 
+            Utils.quitInError("A PROVIDED FILE DOES NOT EXIST") 
 
 #the fucntion correspondingn ot the "-xt" (exclude type) option 
 #sets the program to exclude the file types indicated by the arugment from the scans  
@@ -189,13 +186,18 @@ def excTypeOptionFunc(types):
 #the function that corresponds to the "-x" (exclude) option 
 #sets the program to exlcude the files indicated by the excludeFile.yaml file from the scan 
 #works by removing files in the temp folder that are indicated on the excludeFile file
-def excFilesOpt(): 
-    with open(Utils.getProjRoot() + "data/excludeFile.yaml", "r") as fp: 
-        excList = yaml.load(fp, Loader=yaml.FullLoader)["excludeFiles"] 
+def excFilesOpt():  
+    try:
+        with open(Utils.getProjRoot() + "data/excludeFile.yaml", "r") as fp: 
+            excList = yaml.load(fp, Loader=yaml.FullLoader)["excludeFiles"]  
+    except (FileNotFoundError,yaml.YAMLERROR): 
+        Utils.quitInError("ERROR PROCESSING data/excludeFile.yaml")
 
-    for file in excList: 
-        os.remove(Utils.getProjRoot() + "data/temp/" + file)  
-    
+    for file in excList:  
+        try:
+            os.remove(Utils.getProjRoot() + "data/temp/" + file)  
+        except FileNotFoundError: 
+            Utils.printErrorMessage(file + "DOESN'T EXIST")
     Utils.printNotiMessage("EXCLUDED: " + str(excList) + " FILES") 
 
 #option function for the "-n" (name) option 

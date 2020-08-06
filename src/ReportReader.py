@@ -15,12 +15,6 @@ from Scheduler import Task
 
 class ReportReader:  
 
-    #To-Do: 
-        #error prevention (espically keys errors, connection errors)
-        #other details for report 
-        #multi cmd calls 
-        #dont get files when scans fail 
-
     #As far as I know three ways to get the json reports of statix analyzers based off 
     #of where they put them and acsess 
     #1. get local file 
@@ -58,7 +52,7 @@ class ReportReader:
             if (task.method == "FILE"):  
                 report = self.__getLocalFile(toolName=task.toolName, requestCommands=task.requestCommands) 
                 if report != "FAILED":
-                    reports.append(Report(task.toolName, report)) 
+                    reports.append(Report(task.toolName, report))  
             elif(task.method == "API"):  
                 #returns strign from file 
                 report = self.__getApiFile(toolName=task.toolName, requestCommands=task.requestCommands) 
@@ -69,10 +63,13 @@ class ReportReader:
          
         for report in reports: 
             repObj = json.loads(report.json)   
-            mapping = self.__intFile["tools"][report.toolName]["mapping"] 
-            vuls = repObj[mapping["vulList"]]  
-            for vul in vuls: 
-                genVulList.append(self.__addToGenReport( vul=vul, mapping = mapping, toolName=report.toolName ) ) 
+            mapping = self.__intFile["tools"][report.toolName]["mapping"]  
+            try:
+                vuls = repObj[mapping["vulList"]]  
+                for vul in vuls: 
+                    genVulList.append(self.__addToGenReport( vul=vul, mapping = mapping, toolName=report.toolName ) )  
+            except KeyError: 
+                Utils.printErrorMessage("INVALID REPORT RESPONSE FROM " + report.toolName)   
 
         #add overall infomation/ create whole object 
         count = len(genVulList)  
@@ -126,11 +123,17 @@ class ReportReader:
         curr = 0
         for command in requestCommands:  
             curr +=1  
-            if(curr == length):  
-                with open(command) as output:
-                    return output.read() 
-            else: 
-                subprocess.run(command, shell=True)  
+            if(curr == length): 
+                try: 
+                    with open(command) as output:
+                        return output.read()  
+                except FileNotFoundError: 
+                    Utils.printErrorMessage("FAILED TO RETERIVE " +toolName + "'s REPORT") 
+            else:  
+                try: 
+                    subprocess.run(command, shell=True) 
+                except FileNotFoundError: 
+                    Utils.printErrorMessage("FAILED TO RETERIVE " +toolName + "'s REPORT")
         subprocess.run(command,shell = True,stdout=output).returncode  
 
 #private function that is responsible for reterving json contents of file stored in a server via API requests 
