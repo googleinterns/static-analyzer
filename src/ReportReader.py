@@ -97,7 +97,7 @@ class ReportReader:
         try:
             locStr = vul[mapping["location"]] 
         except KeyError:  
-            locStr = "NO LOCATION"  
+            locStr = -1  
         
         genVulObj = { 
             "description": vul[mapping["description"]], 

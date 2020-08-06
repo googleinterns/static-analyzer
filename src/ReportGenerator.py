@@ -13,6 +13,7 @@ class ReportGenerator:
         self.__genHTML() 
         self.__genJSON()  
         self.__genCl() 
+        self.__genGerrit()
     
     def __genString(self): 
         jsonObj =json.loads(self.__report)   
@@ -60,7 +61,20 @@ class ReportGenerator:
 
         if self._verbose: 
             Utils.printNotiMessage(self.__string)
-       
+
+    def __genGerrit(self): 
+        gerritList = [] 
+        
+        jsonObj =json.loads(self.__report)   
+        for vul in jsonObj["listOfVuls"]: 
+            obj = {"path": vul["file"], "message": vul["description"], "startLine":vul["location"]} 
+            gerritList.append(obj) 
+        
+        with open(Utils.getProjRoot() + "reports/" + "gerrit_comments.json", "w") as file: 
+            file.write(json.dumps(gerritList))
+        
+    
+        
        
 
-    
+

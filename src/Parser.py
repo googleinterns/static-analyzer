@@ -10,7 +10,7 @@ from Engine import Engine
 from ReportReader import ReportReader  
 from ReportGenerator import ReportGenerator
 
-#The parser file is the overall wrapper for the static analyzder tool. 
+#The parser file is the overall wrapper for the static analyzer tool. 
 #all of the classes that the progran uses is intialzied and ran in this file and this 
 #is the starting point of the program is located.  
     
