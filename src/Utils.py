@@ -41,13 +41,15 @@ def getProjRoot():
     return str(Path.home()) + "/static-analyzer/"  
 
 def setup():  
-    printNotiMessage("INITIALIZING")
-    if os.path.isdir(getProjRoot() + "data/analyzerOutput") == False:  
-        ROOT = getProjRoot()
+    printNotiMessage("INITIALIZING") 
+    ROOT = getProjRoot()
+    if os.path.isdir(ROOT + "data/analyzerOutput") == False:  
         #make needed directories 
-        os.mkdir(ROOT + "data/analyzerOutput") 
+        os.mkdir(ROOT + "data/analyzerOutput")  
+    if os.path.isdir(ROOT + "reports") == False:
         os.mkdir(ROOT + "reports")
 
+    if os.path.isdir(ROOT + "static-analyzers/sonarQube/sonarqube-8.4.1.35646") == False:
         #sonarQube   
         sonarQubeRoot = ROOT + "static-analyzers/sonarQube"
         #download and unzip sonarQube dependices
@@ -76,6 +78,7 @@ def setup():
         subprocess.run("chmod +x " + sonarQubeRoot +"/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner", shell=True) 
         subprocess.run("chmod +x " + sonarQubeRoot +"/sonar-scanner-4.4.0.2170-linux/jre/bin/java", shell=True) 
 
+        #pip already checks  for  installations before 
         #pyLint  
         pyLintRoot = ROOT + "static-analyzers/pyLint/" 
         os.chdir(pyLintRoot)  
