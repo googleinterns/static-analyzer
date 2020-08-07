@@ -78,11 +78,11 @@ def setup():
         subprocess.run("chmod +x " + sonarQubeRoot +"/sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner", shell=True) 
         subprocess.run("chmod +x " + sonarQubeRoot +"/sonar-scanner-4.4.0.2170-linux/jre/bin/java", shell=True) 
 
-        #pip already checks  for  installations before 
-        #pyLint  
-        pyLintRoot = ROOT + "static-analyzers/pyLint/" 
-        os.chdir(pyLintRoot)  
-        subprocess.run("pip install pylint", shell=True)
+    #pip already checks  for  installations before 
+    #pyLint  
+    pyLintRoot = ROOT + "static-analyzers/pyLint/" 
+    os.chdir(pyLintRoot)  
+    subprocess.run("pip install pylint", shell=True)
 
 
     
