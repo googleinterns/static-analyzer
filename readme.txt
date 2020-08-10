@@ -3,10 +3,15 @@ Description:
 The analyzers can potentially support different languages and different policies, enabling this tool to provide wide and deep scans across a repository with very little effort from the end user 
 
 Installation: 
-    The user first needs to download this repository and install it somewhere in their home directory. 
+    The user first needs to download this repository. 
     Python3, pip, and java are required dependecies 
-    At this point the user should be ready to go 
-
+    At this point the user should be ready to go  
+    The tool automatically installs the static analyzer dependecies (th estatic analyzers used in this tool). Here is a list of the current installations  
+        SonarQube  
+            sonarqube static analyzer (version 4.4.0.2170) https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-linux.zip
+            sonarqube server which the analyzer depends on (version 8.4.1.35646) https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.4.1.35646.zip 
+        Pylint 
+            pylint (version 1.9.5) pip install pylint 
 Usage: 
     In the bin directory there is a binary that when invoked starts the execution of the tool.  
     The invocation command can be followed by a list of options. The two special ones are:
@@ -33,8 +38,8 @@ Usage:
         3. a verbose json report which delineates all of the issues found by the scans. This can be found in the reports directory 
     After every session of scans a new set of these three reports are generated. The latter two being files differentiated from other scans by timestamps. 
 
-
-
+WARNINGS    
+    Currently it is not recommended to run this program parallely due to certain static analyzers interacting withthem selves
 
 
         

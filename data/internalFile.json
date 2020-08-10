@@ -27,7 +27,7 @@
         "Pylint":{ 
             "toolName":"Pylint", 
             "fileTypes": ["py"], 
-            "invokeCommands":["pylint temp --output-format=json"], 
+            "invokeCommands":["pylint *.py --output-format=json"], 
             "method":"FILE", 
             "requestCommands":["python3 ../../static-analyzers/pyLint/formatOutput.py", "../analyzerOutput/PyLint.json"],  
             "sucRetCodes": [0,16,22], 
