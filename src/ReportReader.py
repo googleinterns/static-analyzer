@@ -83,7 +83,7 @@ class ReportReader:
             "listOfVuls": genVulList
         } 
 
-        return json.dumps(genRepObj)
+        return json.dumps(genRepObj).replace("SATool:", "")
 
 
     #private function that appends an analyzer's report's issue to the general report  

@@ -4,7 +4,9 @@ import shutil
 import requests 
 import time  
 import subprocess
-from pathlib import Path 
+from pathlib import Path  
+
+global ROOT
 
 #Utils.py is a collection of fucntionalites commonly used throughout the program 
 
@@ -37,12 +39,15 @@ def quitInError(message):
     os._exit(1)  
 
 #returns the path of the root dirctory of the program
-def getProjRoot():  
-    return str(Path.home()) + "/static-analyzer/"  
+def getProjRoot():    
+    return ROOT
 
-def setup():  
-    printNotiMessage("INITIALIZING") 
-    ROOT = getProjRoot()
+def setup():   
+    printNotiMessage("INITIALIZING")  
+    #gets root path 
+    global ROOT 
+    ROOT = os.path.dirname(os.path.abspath("../readme.txt")) + "/" 
+
     if os.path.isdir(ROOT + "data/analyzerOutput") == False:  
         #make needed directories 
         os.mkdir(ROOT + "data/analyzerOutput")  
@@ -82,8 +87,11 @@ def setup():
     #pyLint  
     pyLintRoot = ROOT + "static-analyzers/pyLint/" 
     os.chdir(pyLintRoot)  
-    subprocess.run("pip install pylint", shell=True)
+    subprocess.run("pip install pylint", shell=True) 
 
+    #checks for temp file and  deletes it if there 
+    if os.path.isdir(ROOT + "data/temp"):  
+        printErrorMessage("TEMP ALREADY EXISTES; DELETING...")
+        shutil.rmtree(ROOT + "data/temp")  
 
     
-

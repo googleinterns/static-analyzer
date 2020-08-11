@@ -23,7 +23,7 @@ class Scheduler:
         #get file types and other info 
         exts = self.__getFileExt(); 
         tools = list(self.__intFile["tools"])  
-        toolsObj = self.__intFile["tools"]  
+        toolsObj = self.__intFile["tools"]   
 
         #make task to ensure that for each compatible type there's atleast one analyzer
         for ext in exts: 
@@ -48,10 +48,11 @@ class Scheduler:
         ext = []  
 
         for root, dirs, filenames in os.walk(".", topdown= True): 
-            files.extend(filenames)  
+            files.extend(filenames)   
         for file in files: 
             ext.append(file.split(".")[-1]) 
 
+      
         return set(ext)
         
 #Task objects represents an analyzer job/scan that needs to be done and contains info to assist 

@@ -1,12 +1,16 @@
 from datetime import datetime 
 import Utils 
-import json 
+import json  
+import os
 class ReportGenerator: 
 
     def __init__(self,report,name,verbose):
-        self.__report = report   
-        self.__fileName = name + str(datetime.now()) 
+        self.__report = report    
+        self.__time = str(datetime.timestamp(datetime.now()))
+        self.__fileName = (name + self.__time).replace(" ","") 
         self._verbose = verbose  
+        os.mkdir(Utils.getProjRoot() + "reports/" + self.__time)  
+
 
     def generateReports(self): 
         self.__genString() 
@@ -41,14 +45,14 @@ class ReportGenerator:
         string += "</body>\n" 
         string += "</html>" 
 
-        with open(Utils.getProjRoot() + "reports/" + self.__fileName + ".html", "w") as file: 
+        with open(Utils.getProjRoot() + "reports/" + self.__time +"/"+ self.__fileName + ".html", "w") as file: 
             file.write(string) 
         
 
 
 
     def __genJSON(self): 
-       with open(Utils.getProjRoot() + "reports/" + self.__fileName + ".json", "w") as file: 
+       with open(Utils.getProjRoot() + "reports/" + self.__time + "/" +  self.__fileName + ".json", "w") as file: 
             file.write(self.__report) 
 
     def __genCl(self):  
@@ -70,8 +74,11 @@ class ReportGenerator:
             obj = {"path": vul["file"], "message": vul["description"], "startLine":vul["location"]} 
             gerritList.append(obj) 
         
-        with open(Utils.getProjRoot() + "reports/" + "gerrit_comments.json", "w") as file: 
-            file.write(json.dumps(gerritList))
+        with open(Utils.getProjRoot() + "reports/"  + "gerrit_comments.json", "w") as file:  
+            if len(gerritList) == 0: 
+                file.write("{}") 
+            else:
+                file.write(json.dumps(gerritList)) 
         
     
         

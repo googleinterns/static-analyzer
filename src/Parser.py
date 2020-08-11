@@ -23,7 +23,7 @@ name = ""
 
 global verbose 
 verbose = False
-def start():  
+def start():   
     #setup/initalize 
     Utils.setup() 
 
@@ -141,8 +141,6 @@ def repoOptionFunc(location):
     name = location[0].replace("/","-")
     try: 
         shutil.copytree(location[0], Utils.getProjRoot() + "data/temp")  
-    except FileExistsError as excp:
-        Utils.quitInError("TEMP ALREADY EXISTS PLEASE RENAME OR DELETE") 
     except FileNotFoundError as excp: 
         Utils.quitInError("PATH TO SRC DOSEN'T EXIST")
     except shutil.Error as excp: 
@@ -154,13 +152,10 @@ def repoOptionFunc(location):
 #the function copies each of the indicated files into a new temp repository
 def listOptionFunc(list):  
     tempDir = Utils.getProjRoot() + "data/temp"   
-
     global name
     name = list[0].replace("/","-")
-    try:
-        os.mkdir(tempDir)    
-    except FileExistsError as excp: 
-         Utils.quitInError("TEMP ALREADY EXISTS PLEASE RENAME OR DELETE") 
+       
+    os.mkdir(tempDir)    
 
     for file in list:  
         fileName = file.split("/")[-1] 
