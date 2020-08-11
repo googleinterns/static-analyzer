@@ -2,11 +2,15 @@ Description:
     This software is a tool that integrates static analyzers together to scan provided src code and generate a general report based on the findings of the analyzers. 
 The analyzers can potentially support different languages and different policies, enabling this tool to provide wide and deep scans across a repository with very little effort from the end user 
 
+Prerequisites:  
+     Python3, pip, and java
+
+
 Installation: 
     The user first needs to download this repository. 
-    Python3, pip, and java are required dependecies 
-    At this point the user should be ready to go  
-    The tool automatically installs the static analyzer dependecies (th estatic analyzers used in this tool). Here is a list of the current installations  
+    At this point the user should be ready to go; The binary in located in the bin directory  
+
+    The tool automatically installs the static analyzer dependencies (the static analyzers used in this tool). Here is a list of the current installations  
         SonarQube  
             sonarqube static analyzer (version 4.4.0.2170) https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-linux.zip
             sonarqube server which the analyzer depends on (version 8.4.1.35646) https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.4.1.35646.zip 
@@ -39,7 +43,23 @@ Usage:
     After every session of scans a new set of these three reports are generated. The latter two being files differentiated from other scans by timestamps. 
 
 WARNINGS    
-    Currently it is not recommended to run this program parallely due to certain static analyzers interacting withthem selves
+    Currently it is not recommended to run this program parallely due to certain static analyzers interacting with themselves 
 
 
-        
+More info on static analyzers and debugging 
+    General 
+         This tool redirects the standard error and standard output of static analyzers to their corresponding files in /data/analyzerOutput.
+    SonarQube
+        SonarQube as mentioned before is made of two components: the actual static analyzer and the server. 
+        The server uses the localhost:9000 port and it's dependent database is using localhost:9001; So make sure these ports are open before running scans 
+        If the sonarqube scan fails, additional details could be obtained by the logs located in /static-analyzers/sonarQube/sonar-scanner-4.4.0.2170-linux/sonar-scanner-debug, 
+        /static-analyzers/sonarQube/sonarqube-8.4.1.35646/logs/sonar.log, /static-analyzers/sonarQube/sonarqube-8.4.1.35646/logs/es.log.  
+        Also more information can be found in /data/analyzerOutput/SonarQube.json and /data/analyzerOutput/sonarQubeErr.json 
+        standalone commands for the sonarqube server can be ran through the /static-analyzers/sonarQube/sonarqube-8.4.1.35646/bin/linux-x86-64/sonar.sh  
+            sonar.sh status -> get status on server 
+            sonar.sh start -> starts the server 
+            sonar.sh stop -> stops the server
+            sonar.sh ->  bring up options
+    Pylint    
+        If pylint scan fails, it outputs information on the error to standard error.
+        So to view debugging information for pylint, you can look at /data/analyzerOutput/PyLint.json and /data/analyzerOutput/PylintErr.json 

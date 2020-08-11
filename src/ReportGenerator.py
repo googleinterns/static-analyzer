@@ -74,7 +74,7 @@ class ReportGenerator:
             obj = {"path": vul["file"], "message": vul["description"], "startLine":vul["location"]} 
             gerritList.append(obj) 
         
-        with open(Utils.getProjRoot() + "reports/" + self.__time + "/" + "gerrit_comments.json", "w") as file:  
+        with open(Utils.getProjRoot() + "reports/"  + "gerrit_comments.json", "w") as file:  
             if len(gerritList) == 0: 
                 file.write("{}") 
             else:
