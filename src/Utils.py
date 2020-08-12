@@ -74,7 +74,10 @@ def setup():
         properties += "sonar.sources=. \n" 
         properties += "sonar.language=java \n"
         with open(sonarQubeRoot + "/sonar-scanner-4.4.0.2170-linux/conf/sonar-scanner.properties","w") as file: 
-            file.write(properties) 
+            file.write(properties)  
+        properties =  "cluster.routing.allocation.disk.watermark.flood_stage: 5gb"
+        with open(sonarQubeRoot + "/sonarqube-8.4.1.35646/elasticsearch/config/elasticsearch.yml", "w") as file: 
+            file.write(properties)
         #grant permissions 
         subprocess.run("chmod +x " + sonarQubeRoot +"/sonarqube-8.4.1.35646/bin/linux-x86-64/sonar.sh", shell=True) 
         subprocess.run("chmod +x " + sonarQubeRoot +"/sonarqube-8.4.1.35646/bin/linux-x86-64/wrapper", shell=True) 
