@@ -5,7 +5,7 @@ import os
 import shutil  
 import Utils  
 import sys 
-
+import re
 
 #The Engine class is responsible for invoking the scans of the appropiate static analyzers  
 #Its constructor takes in a schedule which is a list of task objects; (Task objects are defined in schedule.py) 
@@ -90,8 +90,9 @@ class Engine:
             with open(Utils.getProjRoot() + task.output, "w") as output, open(Utils.getProjRoot() + task.error, "w") as errOutput: 
                     #execute command in invokeCommands list and store exit code
                     retCode = subprocess.run(command,shell = True,stdout=output, stderr=errOutput).returncode 
-            #determine wether the exit code maps to succsessful execution
-            if ( retCode not in set(task.sucRetCodes)): 
+            #determine wether the exit code maps to succsessful execution 
+
+            if  re.match(task.sucRetCodes, str(retCode)) == None:
                 #print(task.toolName + " " + str(retCode)) 
                 # if failed execution then kill the process running the task 
                 os._exit(1)

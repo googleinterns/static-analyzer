@@ -43,7 +43,8 @@ def getProjRoot():
     return ROOT
 
 def setup():   
-    printNotiMessage("INITIALIZING")  
+    printNotiMessage("INITIALIZING") 
+
     #gets root path 
     global ROOT 
     ROOT = os.path.dirname(os.path.abspath("../readme.txt")) + "/" 
@@ -72,7 +73,8 @@ def setup():
         properties += "sonar.projectName=SATool \n" 
         properties += "sonar.projectVersion=1.0 \n" 
         properties += "sonar.sources=. \n" 
-        properties += "sonar.language=java \n"
+        properties += "sonar.language=java \n" 
+        properties += "sonar.java.binaries=. \n"
         with open(sonarQubeRoot + "/sonar-scanner-4.4.0.2170-linux/conf/sonar-scanner.properties","w") as file: 
             file.write(properties)  
         properties =  "cluster.routing.allocation.disk.watermark.flood_stage: 5gb"

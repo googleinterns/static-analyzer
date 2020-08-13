@@ -1,2 +1,3 @@
 excludeFiles: 
-- testp.py
+- testp.py 
+- __init__.py

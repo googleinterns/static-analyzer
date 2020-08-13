@@ -1,2 +1,2 @@
-
-python3 ~/static-analyzer/src/Parser.py $@
+cd "$(dirname "$0")"
+python3 ../src/Parser.py $@
