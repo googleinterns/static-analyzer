@@ -64,7 +64,9 @@ class ReportGenerator:
         Utils.printNotiMessage(string)
 
         if self._verbose: 
-            Utils.printNotiMessage(self.__string)
+            Utils.printNotiMessage(self.__string) 
+
+        Utils.printNotiMessage("REPORTS ARE IN " + self.__time)
 
     def __genGerrit(self): 
         gerritList = [] 
