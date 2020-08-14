@@ -3,7 +3,13 @@ Description:
 The analyzers can potentially support different languages and different policies, enabling this tool to provide wide and deep scans across a repository with very little effort from the end user 
 
 Prerequisites:  
-     Python3, pip, and java
+     Python3, pip, and java 
+    
+System Requirments: 
+    30 kb for the repository 
+    300 mb for sonarqube 
+    700 kb for pylint  
+    
 
 
 Installation: 
